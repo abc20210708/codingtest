@@ -9,14 +9,18 @@ import java.util.Scanner;
             이 과정에서 추적할 변숫값도 지정할 수 있다. 이 방법으로 변숫값이 자신이 의도한 대로 바뀌는지 파악
         3. 변숫값 이외에도 원하는 수식을 입력해 논리 오류를 파악할 수도 있다.
         * */
+
 public class Part02_01 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        //자료형은 long형으로 선언언
+
+       Scanner sc = new Scanner(System.in);
         int testcase = sc.nextInt();
         int answer = 0; //초기화 오류
         int A[] = new int[100001];
         int S[] = new int[100001];
-        for (int i = 0; i < 10000; i++) {  //반복 범위 잘못 지정
+        for (int i = 1; i < 10000; i++) {  //반복 범위 잘못 지정
             A[i] = (int)(Math.random() * Integer.MAX_VALUE);
             S[i] = S[i - 1] + A[i];
         }
@@ -27,6 +31,7 @@ public class Part02_01 {
                 int end = sc.nextInt();
                 answer += S[end] - S[start - 1];
                 System.out.println(testcase + " " + answer);
+                //testcase 출력이 아닌 t를 출력
             }
         }
     }//main
