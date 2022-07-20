@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Part02_01 {
     public static void main(String[] args) {
 
-        //자료형은 long형으로 선언언
+        //자료형은 long형으로 선언
 
        Scanner sc = new Scanner(System.in);
         int testcase = sc.nextInt();
