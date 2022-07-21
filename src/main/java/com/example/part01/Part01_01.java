@@ -1,4 +1,4 @@
-package com.example.chap01;
+package com.example.part01;
 
 /*
  시간 복잡도 유형
@@ -8,7 +8,7 @@ package com.example.chap01;
 * */
 
 //시간 복잡도 예제 코드
-public class Part01_1 {
+public class Part01_01 {
     public static void main(String[] args) {
         // 1 ~ 100 사이 값 랜덤 선택
         int findNumber = (int)(Math.random() * 100);

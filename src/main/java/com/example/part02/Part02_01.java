@@ -1,4 +1,4 @@
-package com.example.chap02;
+package com.example.part02;
 
 import java.util.Scanner;
 
