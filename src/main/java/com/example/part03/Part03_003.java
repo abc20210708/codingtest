@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-//03-02 배열과 리스트
+//03-02 구간 합
 public class Part03_003 { //003.구간 합 구하기 1
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader =
