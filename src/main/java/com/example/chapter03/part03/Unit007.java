@@ -1,4 +1,4 @@
-package com.example.part03;
+package com.example.chapter03.part03;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 //03-03 투 포인터
-public class Part03_007 { //007.주몽의 명령
+public class Unit007 { //007.주몽의 명령
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(bf.readLine());
@@ -47,7 +47,6 @@ public class Part03_007 { //007.주몽의 명령
             else if( 재료 합 > M) 큰 번호 재료를 한 칸 아래로 변경
             else 경우의 수 증가, 양쪽 index 각각 변경
         }
-        count 출력하기
-        * */
+        count 출력하기        * */
     }//main
 }//class

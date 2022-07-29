@@ -1,11 +1,11 @@
-package com.example.part03;
+package com.example.chapter03.part02;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //03-02 구간 합
-public class Part03_004 { //004.구간 합 구하기 2
+public class Unit004 { //004.구간 합 구하기 2
     public static void main(String[] args) throws Exception{
         //D[i][j]의 값을 채우는 구간 합 공식
         //D[i][j] = D[i][j - 1] + D[i - 1][j] - D[i - 1][j - 1] + A[i][j]

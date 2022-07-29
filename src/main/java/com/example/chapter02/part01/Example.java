@@ -1,4 +1,4 @@
-package com.example.part02;
+package com.example.chapter02.part01;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
         3. 변숫값 이외에도 원하는 수식을 입력해 논리 오류를 파악할 수도 있다.
         * */
 
-public class Part02_01 {
+public class Example {
     public static void main(String[] args) {
 
         //자료형은 long형으로 선언

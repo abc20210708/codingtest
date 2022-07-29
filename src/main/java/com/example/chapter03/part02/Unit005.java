@@ -1,9 +1,9 @@
-package com.example.part03;
+package com.example.chapter03.part02;
 
 import java.util.Scanner;
 
 //03-02 구간 합
-public class Part03_005 { //005.나머지 합 구하기
+public class Unit005 { //005.나머지 합 구하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
