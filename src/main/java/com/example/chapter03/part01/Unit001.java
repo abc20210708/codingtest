@@ -37,8 +37,14 @@ public class Unit001 { // 001.숫자의 합 구하기
     4. 포인터를 저장할 공간이 필요하므로 배열보다 구조가 복잡하다.
 
     * 참고 블로그 https://st-lab.tistory.com/61
+    *           https://gyuwon95.tistory.com/48
     *
     방법 (1) Scanner 입력받아 charAt()을 사용해 푸는 방법
+
+
+        * Scanner : 입력 받을 경우, 공백(space)이나 Enter를 모두 경계로 인식함
+                    nextInt(), next(), nextChar() 등 다양한 형식의 데이터 입력가능
+
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt(); //숫자의 개수 N을 입력 받는다.
@@ -58,12 +64,18 @@ public class Unit001 { // 001.숫자의 합 구하기
 
 /*  방법 (2) BufferedReader 사용, 배열을 사용하지 않고 하는 방법
         getBytes() -> 문자열에 대해 해당 문자열을 하나의 byte 배열로 변환
+
+        * BufferedReader : Enter만 경계로 인식함, String으로만 데이터 인식
+                            장점 - 알고리즘의 시간을 줄일 수 있다.
+
         BufferedReader br = new BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         br.readLine(); //N은 쓸모가 없으므로 입력만 받는다.
 
         int sum = 0;
 
-        for(byte value: br.readLing().getBytes()) { //readLine()으로 읽어들인 문자를 Byte[]로
+        readLine() - 한 줄 단위로 처리할 수 있는 메서드
+
+        for(byte value: br.readLine().getBytes()) { //readLine()으로 읽어들인 문자를 Byte[]로
                                                     //변환하여 반환
             sum += (value - '0'); //또는 (a-48)
             }
