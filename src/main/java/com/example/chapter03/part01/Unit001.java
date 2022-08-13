@@ -35,4 +35,40 @@ public class Unit001 { // 001.숫자의 합 구하기
     3. 선언할 때 크기를 별도로 지정하지 않아도 된다. 다시 말해 리스트의 크기는 정해져 있지 않으며,
       크기가 변하기 쉬운 데이터를 다룰 때 적절하다.
     4. 포인터를 저장할 공간이 필요하므로 배열보다 구조가 복잡하다.
+
+    * 참고 블로그 https://st-lab.tistory.com/61
+    *
+    방법 (1) Scanner 입력받아 charAt()을 사용해 푸는 방법
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt(); //숫자의 개수 N을 입력 받는다.
+        String a = sc.next(); //정수가 아닌 문자열로 입력 받는다.
+        sc.close();
+
+        int sum = 0;
+
+        for(int i = 0; i < N; i++) {
+            sum += a.charAt(i) - '0'; //첫번째 원소(charAt(0))부터
+                                      //마지막 원소(charAt(N))까지 누적합
+         }
+         System.out.print(sum);
+
+*
+*/
+
+/*  방법 (2) BufferedReader 사용, 배열을 사용하지 않고 하는 방법
+        getBytes() -> 문자열에 대해 해당 문자열을 하나의 byte 배열로 변환
+        BufferedReader br = new BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        br.readLine(); //N은 쓸모가 없으므로 입력만 받는다.
+
+        int sum = 0;
+
+        for(byte value: br.readLing().getBytes()) { //readLine()으로 읽어들인 문자를 Byte[]로
+                                                    //변환하여 반환
+            sum += (value - '0'); //또는 (a-48)
+            }
+
+        System.out.print(sum);
+
+
 * */
