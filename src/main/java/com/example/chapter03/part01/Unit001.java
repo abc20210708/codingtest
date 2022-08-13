@@ -73,7 +73,7 @@ public class Unit001 { // 001.숫자의 합 구하기
 
         int sum = 0;
 
-        readLine() - 한 줄 단위로 처리할 수 있는 메서드
+        readLine() - 한 줄 단위로 처리할 수 있는 메서드, 한 줄을 읽음 // Modifier and Type - String
 
         for(byte value: br.readLine().getBytes()) { //readLine()으로 읽어들인 문자를 Byte[]로
                                                     //변환하여 반환
