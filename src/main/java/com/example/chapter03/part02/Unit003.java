@@ -48,5 +48,26 @@ public class Unit003 { //003.구간 합 구하기 1
         //S[5] = A[0] + A[1] + A[2] + A[3] + A[4] + A[5]
         //S[1] = A[0] + A[1]
         //S[5] - S[1] = A[2] + A[3] + A[4] + A[5]
+
+        /*
+        * 참고 블로그 https://yongku.tistory.com/entry/%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B0%B1%EC%A4%80-11659%EB%B2%88-%EA%B5%AC%EA%B0%84-%ED%95%A9-%EA%B5%AC%ED%95%98%EA%B8%B0-4-%EC%9E%90%EB%B0%94Java
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+
+        int[] arr = new int[N+1];
+        arr[0] = 0;
+
+        for(int i = 1; i<=N; i++) arr[i] = arr[i-1] + sc.nextInt();
+
+        for(int i = 0; i < M;i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+
+            System.out.println(arr[b]- arr[a-1];
+            }
+        *
+         */
     }//main
 }//class
