@@ -2,7 +2,7 @@ package com.example.chapter03.part02;
 
 import java.util.Scanner;
 
-//03-02 구간 합
+//03-02 구간 합 //10986
 public class Unit005 { //005.나머지 합 구하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -50,5 +50,20 @@ public class Unit005 { //005.나머지 합 구하기
         }
         결괏값(answer)출력력
        * */
+
+        /*
+        참고 블로그 https://girawhale.tistory.com/125?category=915305
+
+        연속된 구간의 합이기 때문에 누적합 방법으로 문제를 풀이
+        배열의 연속 구간의 합은 sum[j] - sum[i]로 구할 수 있는데, 이 합의 M으로 나눈 나머지가
+        0인 순서쌍을 구해야한다.
+        
+        (sum[j] - sum[i]) % M = 0이 되고, 모둘러 연산은 분배가 가능하기 때문에
+        sum[j] % M - sum[i] % M = 0
+
+        따라서, sum[i]  % M = sum[j] % M 인 개수를 구하면 된다.
+
+        단, sum[i] % M = 0 인 경우에는 혼자만 존재해도 가능하기 때문에 이를 먼저 더해줘야함
+        * */
     }//main
 }//class
