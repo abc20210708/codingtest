@@ -48,16 +48,17 @@ public class Unit005 { //005.나머지 합 구하기
             C[i](i가 나머지인 인덱스의 개수)에서 2가지를 뽑는 경우의 수를 정답에 더하기
             //C[i]개 중 2개를 뽑는 경우의 수 계산 공식 C[i] * (C[i] - 1) / 2
         }
-        결괏값(answer)출력력
+        결괏값(answer)출력
        * */
 
         /*
         참고 블로그 https://girawhale.tistory.com/125?category=915305
+                    https://intrepidgeeks.com/tutorial/algorithm-bo-jun-10986-remainder-sum
 
         연속된 구간의 합이기 때문에 누적합 방법으로 문제를 풀이
         배열의 연속 구간의 합은 sum[j] - sum[i]로 구할 수 있는데, 이 합의 M으로 나눈 나머지가
         0인 순서쌍을 구해야한다.
-        
+
         (sum[j] - sum[i]) % M = 0이 되고, 모둘러 연산은 분배가 가능하기 때문에
         sum[j] % M - sum[i] % M = 0
 

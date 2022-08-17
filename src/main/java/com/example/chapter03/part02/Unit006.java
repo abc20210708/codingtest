@@ -2,7 +2,7 @@ package com.example.chapter03.part02;
 
 import java.util.Scanner;
 
-//03-03 투 포인터
+//03-03 투 포인터 //
 public class Unit006 { //006.연속된 자연수의 합 구하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -38,5 +38,17 @@ public class Unit006 { //006.연속된 자연수의 합 구하기
         }
         count 출력력
        * */
+
+        /*
+        참고 블로그  https://velog.io/@chw220224/%EB%B0%B1%EC%A4%80
+
+        - N의 값 그 자체도 1연속된 숫자이므로 가지 수에 포함해야한다.
+        - N/2 이상의 값을 연속시켜 더하면 N의 값을 초과해 버리므로 N/2까지만 연속해서 더해보면 된다.
+            (단, 홀수의 경우를 고려해서 N/2+1까지만 계산해보자)
+
+        - N/2+1까지만 계산했기 때문에 반복문에서 N값을 카운트하지 않았다.
+        이를 고려해 count 1부터 시작, 이로 인해 생기는 예외의 경우 (N이 1, 2일 때)를 고려해
+        if문을 넣어주면 쉽게 해결할 수 있다.
+        */
     }//main
 }//class
