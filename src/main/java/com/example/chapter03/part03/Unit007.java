@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-//03-03 투 포인터
+//03-03 투 포인터 //1940
 public class Unit007 { //007.주몽의 명령
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -48,5 +48,26 @@ public class Unit007 { //007.주몽의 명령
             else 경우의 수 증가, 양쪽 index 각각 변경
         }
         count 출력하기        * */
+
+        /* 참고 블로그 https://mygumi.tistory.com/76 */
+
+        /*
+        for(int i = 0; i < n;i++){
+            array[sc.nextInt()]++;
+        }
+
+        int start = 1; end = m-1 , count = 0;
+
+        while(start < end) {
+            if(array[start] != 0 && array[end] != 0) {
+                if(start + end == m) {
+                    count++;
+                }
+            }
+            start++;
+            end--;
+        }
+
+        */
     }//main
 }//class

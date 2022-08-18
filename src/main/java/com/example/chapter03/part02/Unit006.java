@@ -2,7 +2,7 @@ package com.example.chapter03.part02;
 
 import java.util.Scanner;
 
-//03-03 투 포인터 //
+//03-03 투 포인터 //2018
 public class Unit006 { //006.연속된 자연수의 합 구하기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class Unit006 { //006.연속된 자연수의 합 구하기
             else if(sum > N) sum 값 변경, start_index 증가
             else if(sum < N) end_index 증가, sum 값 변경
         }
-        count 출력력
+        count 출력
        * */
 
         /*
