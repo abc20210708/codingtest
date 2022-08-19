@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-//03-03 투 포인터
+//03-03 투 포인터 //1253
 public class Unit008 { //008. '좋은 수' 구하기
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -67,5 +67,7 @@ public class Unit008 { //008. '좋은 수' 구하기
         }
         좋은 수의 개수 출력하기
         * */
+
+        /* 참고 블로그 https://allmymight.tistory.com/97*/
     }//main
 }//class
