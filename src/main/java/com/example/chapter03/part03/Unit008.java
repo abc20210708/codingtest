@@ -68,6 +68,8 @@ public class Unit008 { //008. '좋은 수' 구하기
         좋은 수의 개수 출력하기
         * */
 
-        /* 참고 블로그 https://allmymight.tistory.com/97*/
+        /* 참고 블로그 https://allmymight.tistory.com/97
+    *               https://c-king.tistory.com/417
+        * */
     }//main
 }//class
