@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-//03-04 슬라이딩 윈도우
+//03-04 슬라이딩 윈도우 //12891
 public class Unit009 { //009.DNA 비밀번호
     static int[] checkArr;
     static int[] myArr;
@@ -112,4 +112,61 @@ public class Unit009 { //009.DNA 비밀번호
         제거되는 문자를 myArr에 업데이트하거나 checkSecret 값 변경하기
     }
     * */
+
+    /*
+    참고 블로그 https://recordofwonseok.tistory.com/434
+
+    (0, N-1)만큼 순회하며 가장 왼쪽 끝 문자를 카운트에서 지워줍니다.
+    또한 새로 연결할 문자를(가장 왼쪽 인덱스 + P) 카운트에서 세어줍니다.
+    * */
+
+    /*
+    참고 블로그 https://moonsbeen.tistory.com/257
+
+     static int S,P;
+     static int Result;
+     static boolean[] visited;
+
+     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        S = sc.nextInt();
+        P = sc.nextInt();
+
+        visited = new boolean[10];
+        for(int i = 0; i < m; i++) {
+            visited[sc.nextInt()] = true;
+        }
+
+        backtracking(0,0);
+        System.out.println(count);
+
+     }//main
+
+     public static void backtracking(int idx, int cnt) {
+
+        if(idx == n) {
+            if(cnt == m) count++;
+            return;
+        }
+
+        for(int i = 0; i <= 9; i++) {
+            if(visited[i]) {
+                visited[i] = false;
+                backtracking(idx + 1, cnt + 1);
+                visited[i] = true;
+            } else {
+                backtracking(idx + 1, cnt);
+            }
+        }
+     
+     }//backtracking
+
+
+     */
+
+
+
+
 }//class
