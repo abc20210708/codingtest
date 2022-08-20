@@ -3,7 +3,7 @@ package com.example.chapter03.part05;
 import java.util.Scanner;
 import java.util.Stack;
 
-//03-05 스택과 큐
+//03-05 스택과 큐 //1874
 public class Unit011 { //011.스택으로 오름차순 수열 만들기
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -64,5 +64,11 @@ public class Unit011 { //011.스택으로 오름차순 수열 만들기
             }
             if(-값을 출력한 적이 없으면) 저장한 값 출력력
        * */
+
+        /*
+        참고 블로그 https://comain.tistory.com/251
+                    https://hoho325.tistory.com/144
+
+        * */
     }//main
 }//class
