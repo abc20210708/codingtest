@@ -47,12 +47,19 @@ class Solution {
             n /= 3;
         }
         a = new StringBuilder(a).reverse().toString();
-        
+
         //reverse() 메소드를 제공하는 StringBuilder/StringBuffer 클래스를 이용한다.
         //바꾸고 싶은 문자열을 이용하여 StringBuilder 또는 StringBuffer 객체를 생성 후에 제공되는 reverse() 메서드를 사용
 
 
         return Integer.parseInt(a,3);
+
+        Integer.parseInt에 매개변수를 2개 넘겨주면, 앞에는 변환할 String형의 숫자,
+         뒤에는 변환할 String이 몇진수인지 집어넣으면 10진수값으로 변환시켜줌.
+
+        // 16진수 -> 10진수
+        number = Integer.parseInt(strNum16,16);
+        참고플로그: https://withelizabeth.tistory.com/entry/Integer
     }
 }
 * */
