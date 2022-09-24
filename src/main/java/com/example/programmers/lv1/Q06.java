@@ -2,7 +2,7 @@ package com.example.programmers.lv1;
 import java.util.*;
 
 public class Q06 {
-    
+
         public int solution(int n) {
             int answer = 0;
             String s = "";
@@ -33,3 +33,26 @@ public class Q06 {
         }
     }
 
+/*
+다른 풀이
+//참고 블로그 https://yangbox.tistory.com/58
+
+
+class Solution {
+    public int solution(int n) {
+        String a = "";
+
+        while(n > 0){
+            a = (n % 3) + a;
+            n /= 3;
+        }
+        a = new StringBuilder(a).reverse().toString();
+        
+        //reverse() 메소드를 제공하는 StringBuilder/StringBuffer 클래스를 이용한다.
+        //바꾸고 싶은 문자열을 이용하여 StringBuilder 또는 StringBuffer 객체를 생성 후에 제공되는 reverse() 메서드를 사용
+
+
+        return Integer.parseInt(a,3);
+    }
+}
+* */
