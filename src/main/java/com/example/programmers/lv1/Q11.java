@@ -2,7 +2,7 @@ package com.example.programmers.lv1;
 
 public class Q11 {
 
-   
+
         public int solution(String dartResult) {
             int answer = 0;
             int[] score = new int[3];
