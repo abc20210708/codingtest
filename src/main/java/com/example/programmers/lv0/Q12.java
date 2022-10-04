@@ -1,6 +1,6 @@
 package com.example.programmers.lv0;
 
-public @interface Q12 {
+public class Q12 {
     class Solution {
         public int solution(int[] array, int n) {
             int answer = 0;
