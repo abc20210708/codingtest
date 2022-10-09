@@ -11,7 +11,8 @@ public class Q12 {
             for(int i = 0; i < sizes.length; i++) {
                 int v = Math.max(sizes[i][0], sizes[i][1]);
                 int h = Math.min(sizes[i][0], sizes[i][1]);
-
+                //System.out.println("sizes.length : " +sizes.length);
+               // System.out.println("sizes[0.length : " +sizes[0].length);
                 max_v = Math.max(max_v, v);
                 max_h = Math.max(max_h, h);
             }
@@ -33,6 +34,8 @@ class Solution {
         return answer;
     }
 }
+
+
 * */
 
 /*
