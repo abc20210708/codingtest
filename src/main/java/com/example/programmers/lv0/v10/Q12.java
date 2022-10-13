@@ -1,4 +1,4 @@
-package com.example.programmers.lv0;
+package com.example.programmers.lv0.v10;
 
 public class Q12 {
     class Solution {

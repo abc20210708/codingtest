@@ -1,4 +1,4 @@
-package com.example.programmers.lv0;
+package com.example.programmers.lv0.v20;
 // 참고 블로그 https://drcode-devblog.tistory.com/282
 
 public class Q23 {

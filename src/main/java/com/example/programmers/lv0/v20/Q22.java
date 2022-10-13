@@ -1,4 +1,4 @@
-package com.example.programmers.lv0;
+package com.example.programmers.lv0.v20;
 import java.util.*;
 
 public class Q22 {

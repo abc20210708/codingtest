@@ -1,4 +1,4 @@
-package com.example.programmers.lv0;
+package com.example.programmers.lv0.v10;
 import java.util.Arrays;
 
 public class Q13 {

@@ -1,4 +1,4 @@
-package com.example.programmers.lv0;
+package com.example.programmers.lv0.v20;
 
 public class Q26 {
     class Solution {
