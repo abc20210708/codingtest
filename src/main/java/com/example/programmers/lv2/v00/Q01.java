@@ -1,4 +1,4 @@
-package com.example.programmers.lv2;
+package com.example.programmers.lv2.v00;
 import java.lang.*;
 import java.util.Arrays;
 

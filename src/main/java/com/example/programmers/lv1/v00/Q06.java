@@ -1,5 +1,4 @@
-package com.example.programmers.lv1;
-import java.util.*;
+package com.example.programmers.lv1.v00;
 
 public class Q06 {
 

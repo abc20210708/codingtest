@@ -1,4 +1,4 @@
-package com.example.programmers.lv1;
+package com.example.programmers.lv1.v10;
 import java.util.*;
 
 public class Q12 {

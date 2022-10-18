@@ -1,4 +1,4 @@
-package com.example.programmers.lv1;
+package com.example.programmers.lv1.v00;
 
 public class Q04 {
 

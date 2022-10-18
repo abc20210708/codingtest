@@ -1,4 +1,4 @@
-package com.example.programmers.lv0.v01;
+package com.example.programmers.lv0.v00;
 import java.util.Arrays;
 
 public class Q09 {

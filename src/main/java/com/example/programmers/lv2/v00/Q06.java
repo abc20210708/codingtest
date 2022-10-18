@@ -1,4 +1,4 @@
-package com.example.programmers.lv2;
+package com.example.programmers.lv2.v00;
 import java.util.*;
 public class Q06 {
     class Solution {

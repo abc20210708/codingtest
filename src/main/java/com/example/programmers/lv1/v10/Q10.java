@@ -1,4 +1,4 @@
-package com.example.programmers.lv1;
+package com.example.programmers.lv1.v10;
 //참고 블로그 https://blog.itcode.dev/posts/2021/12/14/programmers-a0009.html
 public class Q10 {
 
