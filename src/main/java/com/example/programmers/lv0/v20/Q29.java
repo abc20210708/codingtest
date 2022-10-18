@@ -1,7 +1,75 @@
 package com.example.programmers.lv0.v20;
+import java.util.*;
 
 public class Q29 {
+
+
+    class Solution {
+        public int solution(int[] array) {
+
+            if(array.length == 1) return array[0];
+
+            Arrays.sort(array);
+            HashMap<Integer, Integer> map = new HashMap<>();
+
+
+            for(int num: array)
+                map.put(num, map.getOrDefault(num, 0) + 1);
+
+
+            int target = 0, tar = 0;
+            for (Map.Entry<Integer, Integer> entrySet : map.entrySet()) {
+                if(tar < entrySet.getValue()) {
+                    tar = entrySet.getValue();
+                    target = entrySet.getKey();
+                }
+            }
+
+
+            int cnt = 0;
+            for(int key: map.values()) { //keySet
+                if(tar == key) cnt++;
+            }
+
+            if(cnt > 1) target = -1;
+
+            return target;
+        }
+
+    }
 }
+
+/* 다른 풀이
+import java.util.*;
+class Solution {
+    public int solution(int[] array) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        // Map(값, 값의 빈도수)
+        for(int x : array)
+            map.put(x, map.getOrDefault(x, 0)+1);
+
+        // Map에서의 최빈값 찾기
+        int mode = 0;
+        int modeNum = 0;
+        for(int x : map.keySet())
+            if(map.get(x) > modeNum) {
+                mode = x;
+                modeNum = map.get(x);
+            }
+
+        // 동일한 최빈값이 여러개일 경우, 그 갯수를 count
+        int modeCnt = 0;
+        for(int x : map.values()){
+            if(x == modeNum) modeCnt++;
+            if(modeCnt > 1) return -1;
+        }
+
+        return mode;
+    }
+}
+* */
+
 /*
 최빈값 구하기
 문제 설명
