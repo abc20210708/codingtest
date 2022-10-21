@@ -27,7 +27,7 @@ public class Q04 {
 
 //참고 블롤그 https://bada744.tistory.com/94
 
-/* 다른 풀이
+/* 다른 풀이 1
 import java.util.Arrays;
 
 class Solution {
@@ -38,6 +38,27 @@ class Solution {
             int smaller = Math.min(citations[i], citations.length-i);
             answer = Math.max(answer, smaller);
         }
+        return answer;
+    }
+}
+* */
+
+/* 다른 풀이 2
+import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] citations) {
+        int answer = 0;
+        Arrays.sort(citations); //오름차순 정렬
+
+        for (int i=citations.length-1;i>-1;i--) {
+            //인용수가 현재 h보다 크지 않은 경우
+            //현재 h가 h의 최댓값임
+            if (citations[i] <= answer)
+                break;
+            answer++;
+        }
+
         return answer;
     }
 }
