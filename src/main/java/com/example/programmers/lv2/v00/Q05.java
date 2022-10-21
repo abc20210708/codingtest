@@ -36,6 +36,33 @@ public class Q05 {
         }
     }
 }
+
+/* 다른 풀이
+import java.util.*;
+class Solution {
+    public String solution(int[] numbers) {
+        String answer = "";
+        PriorityQueue<String> pq = new PriorityQueue<>((a,b)->(b+a).compareTo(a+b));
+        for(int i=0;i<numbers.length;i++){
+            pq.add(numbers[i]+"");
+            System.out.println(numbers[i]+"");
+
+        }
+        for(int i=0;i<numbers.length;i++){
+            answer+=pq.remove();
+
+        }
+
+        -> answer.charAt(0) == '0' 은 [0,0,0] 일경우 "000"이 되어서 앞자리가 0일경우엔 무조건 '0'을 리턴하도록
+        if(answer.charAt(0)=='0'){
+            answer = "0";
+        }
+
+        return answer;
+    }
+}
+* */
+
 //참고 블로그
 //https://hidelookit.tistory.com/90
 /*
