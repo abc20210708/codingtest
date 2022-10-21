@@ -25,6 +25,8 @@ public class Q04 {
     }
 }
 
+//참고 블롤그 https://bada744.tistory.com/94
+
 /* 다른 풀이
 import java.util.Arrays;
 
