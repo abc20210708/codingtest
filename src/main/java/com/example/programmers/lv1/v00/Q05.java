@@ -1,37 +1,7 @@
 package com.example.programmers.lv1.v00;
-
 import java.util.Arrays;
 
 public class Q05 {
-
-    /*
-import java.util.*;
-
-class Solution {
-    public int[] solution(int[] array, int[][] commands) {
-        int[] answer =  {};
-          //  Arrays.copyOfRange(arr, 0, arr.length);
-
-        int num = 0;
-        int idx = 0;
-
-        for(int i = 0; i < commands.length; i++) {
-           for(int j = 0; j < commands[i].length; j++) {
-                //배열 자르기
-                int[] temp = Arrays.copyOfRange(array, i, j);
-                Arrays.sort(temp);
-                 num = commands[j][2];
-                 answer[idx++] = temp[++num];
-           }
-        }
-
-        return answer;
-    }
-} */
-
-
-
-
         public int[] solution(int[] array, int[][] commands) {
             int[] answer = new int[commands.length];
 
@@ -46,6 +16,8 @@ class Solution {
 
 //출처: https://junghn.tistory.com/entry/알고리즘-프로그래머스-k번째-수-정렬 [코딩 시그널:티스토리]
 }
+
+
 
 /*
 K번째수
