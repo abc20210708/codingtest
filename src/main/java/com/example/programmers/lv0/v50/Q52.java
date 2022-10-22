@@ -23,23 +23,44 @@ public class Q52 {
     }
 }
 
-/* 다른 풀이
+/* 다른 풀이 1
 class Solution {
     public int solution(int n) {
-        int fac = 1;
-        int i = 0;
-
-        while(true){
-            if(fac <= n){
-                fac *= i + 1;
-                i++;
-            }else break;
+        int answer = 1;
+        int idx = 1;
+        while(idx<=10){
+            if(fact(idx)>n) break;
+                idx++;
         }
 
-        return i-1;
+
+
+        return --idx;
+    }
+
+    public int fact(int n) {
+        if(n==1) return 1;
+        return n*fact(n-1);
     }
 }
 **/
+
+/*
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        for(int i=1; factorial(i)<=n; i++){
+            answer = i;
+        }
+        return answer;
+    }
+
+    static int factorial(int n) {
+        if(n == 1) return 1;
+        return n*factorial(n-1);
+    }
+}
+* */
 
 /*
 팩토리얼
