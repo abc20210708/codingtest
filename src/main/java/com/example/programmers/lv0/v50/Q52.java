@@ -4,21 +4,15 @@ public class Q52 {
     class Solution {
         public int solution(int n) {
             int answer = 0;
-
-            for(int i = 1; i <= 10; i++) {
-                if(n >= getFacto(i)) {
-                    answer = i;
-                    continue;
-                } else {
-                    break;
-                }
+            for(int i=1; factorial(i)<=n; i++){
+                answer = i;
             }
             return answer;
         }
 
-        public int getFacto(int num) {
-            if(num > 1) return num * getFacto(num -1);
-            return num;
+        public int factorial(int n) {
+            if(n == 1) return 1;
+            return n*factorial(n-1);
         }
     }
 }
@@ -45,22 +39,6 @@ class Solution {
 }
 **/
 
-/*
-class Solution {
-    public int solution(int n) {
-        int answer = 0;
-        for(int i=1; factorial(i)<=n; i++){
-            answer = i;
-        }
-        return answer;
-    }
-
-    static int factorial(int n) {
-        if(n == 1) return 1;
-        return n*factorial(n-1);
-    }
-}
-* */
 
 /*
 팩토리얼
