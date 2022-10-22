@@ -35,7 +35,14 @@ class Solution {
     }
 }
 
-
+//향상된 for문으로 2차원 배열 출력하는 방법
+        System.out.println();
+        for (int[] row : a) { // 행을 먼저 받고
+            for (int n : row) { // 열을 준다
+                System.out.printf("%4d", n);
+            }
+            System.out.println();
+        }
 * */
 
 /*

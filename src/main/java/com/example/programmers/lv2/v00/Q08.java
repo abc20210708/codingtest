@@ -1,6 +1,6 @@
-package com.example.programmers.lv0.v40;
+package com.example.programmers.lv2.v00;
 import java.util.*;
-public class Q41 {
+public class Q08 {
 
     class Solution {
         public boolean solution(String[] phone_book) {
