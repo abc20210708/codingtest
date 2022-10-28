@@ -1,5 +1,4 @@
 package com.example.programmers.lv0.v50;
-import java.lang.*;
 import java.math.*;
 public class Q54 {
     class Solution {
