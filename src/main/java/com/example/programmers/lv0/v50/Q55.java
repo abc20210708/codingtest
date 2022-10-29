@@ -36,8 +36,9 @@ lass Solution {
     public int solution(String my_string) {
         int answer = 0;
 
-        String[] str = my_string.replaceAll("[a-zA-Z]", " ").split(" ");
-
+        String[] str = my_string.replaceAll("[a-zA-Z]", "_").split("_");
+        // "aAb1B2cC34oOp"
+        // ___, 1, _, 2, __, 34, ___ (예제 1의 길이는 7)
         for(String s : str){
             if(!s.equals("")) answer += Integer.valueOf(s);
         }
