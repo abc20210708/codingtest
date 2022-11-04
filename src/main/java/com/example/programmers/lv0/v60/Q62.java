@@ -22,6 +22,30 @@ public class Q62 {
 }
 
 /* 다른 풀이 1
+import java.util.HashMap;
+class Solution {
+    public String solution(String[] id_pw, String[][] db) {
+        String answer = "";
+        HashMap<String,String> map=new HashMap<>();
+        for(int i=0;i<db.length;i++){
+            map.put(db[i][0],db[i][1]);
+        }
+        String pw=map.get(id_pw[0]);
+        if(pw==null){
+            answer = "fail";
+        }else{
+            if(pw.equals(id_pw[1])){
+                answer = "login";
+            }else{
+                answer = "wrong pw";
+            }
+        }
+        return answer;
+    }
+}
+* */
+
+/* 다른 풀이 2
 class Solution {
     public String solution(String[] id_pw, String[][] db) {
         String id = id_pw[0];
@@ -37,7 +61,7 @@ class Solution {
 
 * */
 
-/* 다른 풀이 2
+/* 다른 풀이 3
 class Solution {
     public String solution(String[] id_pw, String[][] db) {
 
