@@ -43,6 +43,11 @@ class Solution {
         return answer;
     }
 }
+
+map.get(Object key)
+인자로 주어진 key와 매팽되는 value를 반환
+HashMap에 key가 없다면 null을 반환
+
 * */
 
 /* 다른 풀이 2
