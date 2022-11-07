@@ -1,5 +1,6 @@
 package com.example.sqlkit.lv01;
 
+//COUNT, AS
 //lv1. 나이 정보가 없는 회원 수 구하기
 public class Q04 {
     /*
