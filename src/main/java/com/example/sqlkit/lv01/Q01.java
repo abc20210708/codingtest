@@ -1,6 +1,6 @@
 package com.example.sqlkit.lv01;
 
-//lv01. 아픈 동물 찾기
+//lv1. 아픈 동물 찾기
 public class Q01 {
     /*
 
