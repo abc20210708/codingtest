@@ -1,7 +1,27 @@
 package com.example.programmers.lv0.v60;
 
 public class Q68 {
+   public int solution(int[] sides) {
+       int answer = 0;
+
+       int max = Math.max(sides[0], sides[1]);
+       int min = Math.min(sides[0], sides[1]);
+
+       int i;
+       for(i = 1; i <= max; i++) {
+           if(i + min > max) answer++;
+       }
+
+       while(sides[0] + sides[1] > i) {
+           answer++;
+           i++;
+       }
+       return answer;
+   }
 }
+//참고 블로그 https://carroti.tistory.com/183
+
+
 /*
 삼각형의 완성조건 (2)
 문제 설명
