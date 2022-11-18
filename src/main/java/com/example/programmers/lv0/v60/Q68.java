@@ -21,6 +21,26 @@ public class Q68 {
 }
 //참고 블로그 https://carroti.tistory.com/183
 
+/*
+class Solution {
+    public int solution(int[] sides) {
+        int answer = 0;
+        // 주어진 수 중 최대가 있는 경우
+        int shorter = Math.min(sides[0], sides[1]);
+        int longer = Math.max(sides[0], sides[1]);
+        for (int other = 1; other <= longer; other++) {
+            if (longer < shorter + other) {
+                answer++;
+            }
+        }
+        // 다른 수가 최대인 경우
+        for (int other = longer + 1; other < shorter + longer; other++) {
+            answer++;
+        }
+        return answer;
+    }
+}
+* */
 
 /*
 삼각형의 완성조건 (2)
