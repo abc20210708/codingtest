@@ -1,6 +1,27 @@
 package com.example.programmers.lv0.v70;
+import java.util.*;
 
 public class Q71 {
+
+    class Solution {
+        public int solution(int[][] dots) {
+            HashSet<Double> leanSet = new HashSet<>();
+
+            for(int i = 0; i < 4; i++) {
+                // i번째를 제외한 그 다음부터 반복
+                for(int j = i+1; j < 4; j++) {
+                    // y좌표의 차이 / x좌표의 차이 = 기울기
+                    double lean = Math.abs((double)(dots[j][1] - dots[i][1]) / (dots[j][0] - dots[i][0]));
+
+                    if(leanSet.contains(lean))
+                        return 1;
+                    leanSet.add(lean);
+                }
+            }
+
+            return 0;
+        }
+    }
 }
 /*
 평행
