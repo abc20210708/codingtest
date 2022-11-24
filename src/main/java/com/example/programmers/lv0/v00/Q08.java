@@ -21,6 +21,19 @@ class Solution {
         return numbers;
     }
 }
+
+다른 풀이 2
+
+class Solution {
+    public int[] solution(int[] numbers) {
+        int[] answer = new int[numbers.length];
+
+        int idx = 0;
+        for(int n : numbers) answer[idx++] = (n*2);
+
+        return answer;
+    }
+}
 * */
 
 
