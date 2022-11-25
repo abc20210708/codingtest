@@ -26,6 +26,23 @@ class Solution {
         return answer;
     }
 }
+
+다른 플이 2
+import java.util.*;
+
+class Solution {
+    public String solution(String cipher, int code) {
+        String answer = "";
+        String[] ch = cipher.split("");
+
+
+        for(int i = code; i <= cipher.length(); i += code) {
+            answer += ch[i-1];
+        }
+
+        return answer;
+    }
+}
 * */
 
 /*
