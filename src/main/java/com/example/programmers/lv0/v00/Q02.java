@@ -36,6 +36,20 @@ class Solution {
         return answer;
     }
 }
+
+class Solution {
+    public int solution(int n) {
+        String[] answer = Integer.toString(n).split("");
+        int num = 0;
+
+        for(int i = 0; i < answer.length; i++) {
+            num += Integer.parseInt(answer[i]);
+        }
+
+
+        return num;
+    }
+}
 * */
 
 /*
