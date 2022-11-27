@@ -51,6 +51,22 @@ class Solution {
 
 * */
 
+/* 다른 풀이 2
+class Solution {
+    public ArrayList solution(String my_string) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        for(int i=0; i<my_string.length(); i++){
+            if(my_string.charAt(i)>='0' && my_string.charAt(i)<='9'){
+                answer.add(my_string.charAt(i)-'0');
+            }
+        }
+        Collections.sort(answer);
+        return answer;
+    }
+}
+
+* */
+
 /*
 문자열 정렬하기 (1)
 
