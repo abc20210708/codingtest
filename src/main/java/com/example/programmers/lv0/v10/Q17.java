@@ -44,6 +44,9 @@ class Solution {
 * */
 
 /* 다른 풀이
+
+//  indexOf() - 특정 문자나 문자열에서 해당하는 문자의 인덱스 값을 반환하고
+                찾지 못했을 경우 '-1'을 반환하는 메소드
 import java.util.*;
 
 class Solution {
