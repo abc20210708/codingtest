@@ -37,6 +37,27 @@ class Solution {
 }
 * */
 
+/* 다른 풀이 2
+import java.util.*;
+
+class Solution {
+    public int solution(int order) {
+        int answer = 0;
+
+        String[] str = Integer.toString(order).split("");
+
+        for(String s : str) {
+           if(s.equals("3") || s.equals("6") || s.equals("9")) {
+               answer++;
+           }
+        }
+
+        return answer;
+    }
+}
+* */
+
+
 /*
 369게임
 
