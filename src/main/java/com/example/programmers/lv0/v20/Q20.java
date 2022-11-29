@@ -12,6 +12,22 @@ public class Q20 {
         }
     }
 }
+
+/* 다른 풀이
+class Solution {
+    public int solution(int n, int t) {
+
+        while(t > 0) {
+            t--;
+            n *= 2;
+        }
+
+        return  n;
+    }
+}
+
+* */
+
 /*
 세균 증식
 문제 설명
