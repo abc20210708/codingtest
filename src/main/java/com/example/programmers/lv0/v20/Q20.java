@@ -28,6 +28,18 @@ class Solution {
 
 * */
 
+/* 다른 풀이 2
+class Solution {
+    public int solution(int n, int t) {
+        int answer = 0;
+
+        answer = n << t;
+
+        return answer;
+    }
+}
+* */
+
 /*
 세균 증식
 문제 설명
