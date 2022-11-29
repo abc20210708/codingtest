@@ -43,6 +43,23 @@ class Solution {
 }
 * */
 
+/* 다른 풀이
+import java.util.*;
+
+class Solution {
+    public int solution(int num, int k) {
+
+
+        String str = Integer.toString(num);
+        int answer = str.indexOf(Integer.toString(k));
+
+        if(answer == -1) return -1;
+        else return ++answer;
+
+    }
+}
+* */
+
 /*
 숫자 찾기
 
