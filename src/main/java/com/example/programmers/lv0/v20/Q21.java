@@ -18,7 +18,7 @@ class Solution {
 
         answer = my_string.replaceAll("[aeiou]", "");
         //answer = my_string.replaceAll("[a,e,i,o,u]","");
-        //return myString.replaceAll("a|e|i|o|u", "");
+        //return my_string.replaceAll("a|e|i|o|u", "");
        // return my_string.replaceAll("[aeiou]", "");
         return answer;
     }
