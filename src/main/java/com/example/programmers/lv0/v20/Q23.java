@@ -16,6 +16,28 @@ public class Q23 {
     }
 }
 
+/* 다른 풀이
+
+ String[] split = my_string.split("");
+
+ Set<String> set = new LinkedHashSet<>();
+ for(String s: split) {
+    set.add(s);
+    }
+
+ String result = "";
+ for(String s: set) {
+    result += s;
+   }
+
+   return result;
+
+   }
+}
+
+ * */
+
+
 /*
 중복된 문자 제거
 
