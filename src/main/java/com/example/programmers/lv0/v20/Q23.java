@@ -38,6 +38,21 @@ public class Q23 {
  * */
 
 
+/* 다른 풀이 2
+
+public String solution(String my_string) {
+   String answer = "";
+   char[] cArr = my_string.toCharArray();
+   for(char c : cArr) {
+     if(answer.indexOf(c) < 0) answer += c;
+     }
+   return answer;
+
+   }
+}
+
+* */
+
 /*
 중복된 문자 제거
 
