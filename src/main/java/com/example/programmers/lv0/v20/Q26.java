@@ -30,6 +30,25 @@ class Solution {
     }
 }
 * */
+
+/* 다른 풀이 2
+class Solution {
+    public int solution(int[] array) {
+        int answer = 0;
+
+        for(int a: array) {
+           String[] str = Integer.toString(a).split("");
+            for(String s: str) {
+                if(s.contains("7")) answer++;
+            }
+        }
+
+        return answer;
+    }
+}
+* */
+
+
 /*
 7의 개수
 문제 설명
