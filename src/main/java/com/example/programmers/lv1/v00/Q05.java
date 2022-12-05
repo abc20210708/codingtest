@@ -17,7 +17,27 @@ public class Q05 {
 //출처: https://junghn.tistory.com/entry/알고리즘-프로그래머스-k번째-수-정렬 [코딩 시그널:티스토리]
 }
 
+/* 다른 풀이
+class Solution {
+public int[] solution(int[] array, int[][] commands) {
+        int[] answer = new int[commands.length];
 
+        for(int i=0; i< commands.length; i++) {
+
+            int spoint = commands[i][0];
+            int epoint = commands[i][1];
+            int idx = commands[i][2];
+
+            int[] tmp = Arrays.copyOfRange(array, spoint-1, epoint);
+            Arrays.sort(tmp);
+
+            answer[i] = tmp[idx-1];
+         }
+
+         return answer;
+    }
+}
+* */
 
 /*
 K번째수
