@@ -94,6 +94,8 @@ class Solution {
 
         for(String p: participant) {
             map.put(p, map.getOrDefault(p, 0) + 1);
+           // getOrDefault : 지정된 키로 매핑된 값이 없는 경우 반환되어야 하는 기본값입니다.
+           //찾는 key가 존재하면 해당 key에 매핑되어 있는 값을 반환하고, 그렇지 않으면 디폴트 값이 반환
         }
 
         for(String c: completion) {
