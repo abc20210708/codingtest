@@ -35,8 +35,8 @@ class Solution {
         for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
         for (String player : completion) hm.put(player, hm.get(player) - 1);
 
-        for (String key : hm.keySet()) {
-            if (hm.get(key) != 0){
+        for (String key : hm.keySet()) { //keySet() 메서드는 key의 값만 출력 //값만 가져오고 싶은 경우 values() 메서드를 사용
+            if (hm.get(key) != 0){ //get(key) 키로 값 찾는 메서드
                 answer = key;
             }
         }
