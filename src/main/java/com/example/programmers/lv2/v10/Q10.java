@@ -57,6 +57,33 @@ class Solution {
 }
 * */
 
+/* 다른 풀이 2
+
+import java.util.*;
+
+class Solution {
+    boolean solution(String s) {
+
+        int count = 0;
+
+        if(s.charAt(s.length() -1) == '(') return false;
+
+        for(char c: s.toCharArray()) {
+            if(c == '(') {
+                count++;
+            } else {
+                if(count <= 0) return false;
+                else count--;
+            }
+        }
+
+        if(count == 0) return true;
+        else return false;
+
+    }
+}
+* */
+
 /*
 올바른 괄호
 문제 설명
