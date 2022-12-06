@@ -33,6 +33,30 @@ public class Q10 {
     }
 }
 
+/* 다른 풀이
+import java.util.*;
+
+class Solution {
+    boolean solution(String s) {
+
+        if(s.charAt(0) == ')') return false;
+
+        int count = 0;
+
+        for(char i: s.toCharArray()) {
+            if(i == '(') {
+                count++;
+            } else {
+                if(count <= 0) return false;
+                count--;
+            }
+        }
+
+        return (count > 0) ? false : true;
+    }
+}
+* */
+
 /*
 올바른 괄호
 문제 설명
