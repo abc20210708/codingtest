@@ -1,6 +1,7 @@
 package com.example.programmers.lv1.v10;
 import java.util.*;
 
+//lv1. 같은 숫자는 싫어
 public class Q16 {
 
     public class Solution {
@@ -17,6 +18,25 @@ public class Q16 {
         }
     }
 }
+
+/* 다른 풀이
+import java.util.*;
+
+public class Solution {
+    public ArrayList<Integer> solution(int []arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+
+        for(int i = 0; i < arr.length-1; i++) {
+          if(arr[i] != arr[i+1]) list.add(arr[i]);
+        }
+
+        list.add(arr[arr.length-1]);
+
+        return list;
+    }
+}
+* */
 
 /*
 같은 숫자는 싫어
