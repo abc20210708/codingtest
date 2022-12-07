@@ -38,6 +38,27 @@ public class Solution {
 }
 * */
 
+/* 다른 풀이 2
+import java.util.*;
+
+public class Solution {
+    public ArrayList<Integer> solution(int []arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        int num = -1;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] != num) {
+                list.add(arr[i]);
+                num = arr[i];
+            }
+        }
+
+        return list;
+    }
+}
+* */
+
+
 /*
 같은 숫자는 싫어
 문제 설명
