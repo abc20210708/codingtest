@@ -26,7 +26,7 @@ public class Q12 {
 class Solution {
     public int solution(int[][] sizes) {
         int length = 0, height = 0;
-        for (int[] card : sizes) {
+        for (int[] card : sizes) { //행을 받고
             length = Math.max(length, Math.max(card[0], card[1]));
             height = Math.max(height, Math.min(card[0], card[1]));
         }
