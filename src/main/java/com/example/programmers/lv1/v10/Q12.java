@@ -4,7 +4,7 @@ import java.util.*;
 public class Q12 {
     class Solution {
         public int solution(int[][] sizes) {
-            int answer = 0;
+
             int max_v = 0;
             int max_h = 0;
 
@@ -17,7 +17,7 @@ public class Q12 {
                 max_h = Math.max(max_h, h);
             }
 
-            return answer = max_v * max_h;
+            return max_v * max_h;
         }
     }
 }
