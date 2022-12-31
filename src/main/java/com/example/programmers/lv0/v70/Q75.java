@@ -1,6 +1,28 @@
 package com.example.programmers.lv0.v70;
+import java.util.*;
 
 public class Q75 {
+
+    class Solution {
+        public int solution(String[] babbling) {
+            int answer = 0;
+
+            Arrays.sort(babbling);
+
+            for(String b : babbling) {
+                if(b.length() <= 15) {
+                    String temp = b;
+                    String[] tempArr = temp.split("aya|ye|woo|ma");
+                    System.out.println(Arrays.toString(tempArr));
+                    if(tempArr.length == 0) answer++;
+                }
+            }
+
+
+            return answer;
+        }
+    }
+
 }
 
 /*
