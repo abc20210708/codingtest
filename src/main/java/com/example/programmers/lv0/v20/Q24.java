@@ -9,6 +9,24 @@ public class Q24 {
     }
 }
 
+/* 다른 풀이
+import java.util.*;
+
+class Solution {
+    public String solution(String my_string, String letter) {
+        StringBuilder sb = new StringBuilder();
+
+        char[] ch = my_string.toCharArray();
+
+        for(char c: ch) {
+            if(c != letter.charAt(0)) sb.append(c);
+        }
+
+        return sb.toString();
+    }
+}
+* */
+
 /*
 특정 문자 제거하기
 
