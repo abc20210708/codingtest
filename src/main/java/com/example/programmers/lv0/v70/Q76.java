@@ -4,13 +4,11 @@ package com.example.programmers.lv0.v70;
 public class Q76 {
     class Solution {
         public String solution(String my_string, int n) {
-
             String answer = "";
-            String str[] = my_string.split("");
 
-            for(int i = 0; i < str.length; i++) {
+            for(int i = 0; i < my_string.length(); i++) {
                 for(int j = 0; j < n; j++) {
-                    answer += str[i];
+                    answer += my_string.substring(i, i+1);
                 }
             }
 
@@ -28,6 +26,20 @@ public class Q76 {
                 }
             }
             return answer;
+* */
+
+/* 다른 풀이 2
+  String answer = "";
+            String str[] = my_string.split("");
+
+            for(int i = 0; i < str.length; i++) {
+                for(int j = 0; j < n; j++) {
+                    answer += str[i];
+                }
+            }
+
+            return answer;
+
 * */
 
 /*
