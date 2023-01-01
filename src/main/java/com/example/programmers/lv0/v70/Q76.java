@@ -6,6 +6,21 @@ public class Q76 {
         public String solution(String my_string, int n) {
 
             String answer = "";
+            String str[] = my_string.split("");
+
+            for(int i = 0; i < str.length; i++) {
+                for(int j = 0; j < n; j++) {
+                    answer += str[i];
+                }
+            }
+
+            return answer;
+        }
+    }
+}
+
+/* 다른 풀이
+  String answer = "";
 
             for(int i = 0; i < my_string.length(); i++) {
                 for(int j = 0; j < n; j++) {
@@ -13,9 +28,7 @@ public class Q76 {
                 }
             }
             return answer;
-        }
-    }
-}
+* */
 
 /*
 문자 반복 출력하기
