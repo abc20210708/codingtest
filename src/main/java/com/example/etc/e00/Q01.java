@@ -2,7 +2,20 @@ package com.example.etc.e00;
 import java.util.*;
 
 public class Q01 {
-    public class Solution {
+    public int solution(int n) {
+        int answer = 0;
+
+        char[] ch = Integer.toString(n).toCharArray();
+
+        for(char c: ch) {
+            answer += c - 48;
+        }
+        return answer;
+    }
+}
+
+/* 다른 풀이
+public class Solution {
         public int solution(int n) {
             int answer = 0;
 
@@ -14,7 +27,8 @@ public class Q01 {
             return answer;
         }
     }
-}
+
+* */
 
 /*
 자릿수 더하기
