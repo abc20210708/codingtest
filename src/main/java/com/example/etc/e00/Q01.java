@@ -1,5 +1,4 @@
 package com.example.etc.e00;
-import java.util.*;
 
 public class Q01 {
     public int solution(int n) {
