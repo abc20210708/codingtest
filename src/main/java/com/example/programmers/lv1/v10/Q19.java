@@ -3,14 +3,14 @@ package com.example.programmers.lv1.v10;
 public class Q19 {
     class Solution {
         public int[] solution(long n) {
+            String s = String.valueOf(n);
+            StringBuilder sb = new StringBuilder(s);
+            sb = sb.reverse();
+            String[] str = sb.toString().split("");
 
-            int length = Long.toString(n).length();
-            int[] answer = new int[length];
-
-            int idx = 0;
-            while(n > 0) {
-                answer[idx++] = (int)n % 10;
-                n /= 10;
+            int[] answer = new int[str.length];
+            for(int i = 0; i < str.length; i++) {
+                answer[i] = Integer.parseInt(str[i]);
             }
 
             return answer;
@@ -35,6 +35,20 @@ class Solution {
         return answer;
     }
 }
+* */
+
+/* 다른 풀이 2
+ int length = Long.toString(n).length();
+            int[] answer = new int[length];
+
+            int idx = 0;
+            while(n > 0) {
+                answer[idx++] = (int)n % 10;
+                n /= 10;
+            }
+
+            return answer;
+
 * */
 
 /*
