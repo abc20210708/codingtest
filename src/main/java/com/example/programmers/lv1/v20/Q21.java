@@ -2,19 +2,8 @@ package com.example.programmers.lv1.v20;
 
 public class Q21 {
     boolean solution(String s) {
-        boolean answer = true;
-        int cnt = 0;
-        char ch = ' ';
-
-        for(int i = 0; i < s.length(); i++) {
-            ch = s.charAt(i);
-            if(ch == 'p' || ch == 'P') cnt++;
-            else if(ch == 'y' || ch == 'Y') cnt--;
-        }
-
-        if(cnt != 0) answer = false;
-
-        return answer;
+       return s.replaceAll("[^yY]", "").length()
+               - s.replaceAll("[^pP]", "").length() == 0;
     }
 }
 
@@ -35,6 +24,22 @@ public class Q21 {
 
         return answer;
     }
+* */
+
+/* 다른 풀이 2
+     boolean answer = true;
+        int cnt = 0;
+        char ch = ' ';
+
+        for(int i = 0; i < s.length(); i++) {
+            ch = s.charAt(i);
+            if(ch == 'p' || ch == 'P') cnt++;
+            else if(ch == 'y' || ch == 'Y') cnt--;
+        }
+
+        if(cnt != 0) answer = false;
+
+        return answer;
 * */
 
 /*
