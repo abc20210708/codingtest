@@ -10,6 +10,13 @@ public class Q30 {
 
             if(arr.length == 1) answer.add(-1);
 
+            /*
+            int min=arr[0];
+            for(int i: arr) {
+                min = Math.min(min, i);
+            }
+            * */
+            
             int min = Integer.MAX_VALUE;
             for(int a : arr) {
                 if(min > a) min = a;
