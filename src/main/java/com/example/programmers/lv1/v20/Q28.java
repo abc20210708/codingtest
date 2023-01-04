@@ -15,6 +15,21 @@ public class Q28 {
     }
 }
 
+/* 다른 풀이
+
+String answer = "";
+
+        for(int i = 0; i < phone_number.length(); i++) {
+            if(i < phone_number.length() -4) {
+                answer += "*";
+            } else {
+                answer += phone_number.charAt(i);
+            }
+        }
+
+        return answer;
+* */
+
 /*
 핸드폰 번호 가리기
 문제 설명
