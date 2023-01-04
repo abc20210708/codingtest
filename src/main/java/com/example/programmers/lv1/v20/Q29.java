@@ -16,6 +16,26 @@ public class Q29 {
         return list;
     }
 }
+
+/* 다른 풀이
+int cnt = 0;
+        for(int a: arr)
+            if(a % divisor == 0) cnt++;
+
+        int[] answer = new int[cnt];
+
+        int idx = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] % divisor == 0) answer[idx++] = arr[i];
+        }
+
+        if(cnt == 0) return new int[] {-1};
+
+        Arrays.sort(answer);
+
+        return answer;
+* */
+
 /*
 나누어 떨어지는 숫자 배열
 문제 설명
