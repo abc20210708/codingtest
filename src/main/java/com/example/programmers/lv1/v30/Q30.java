@@ -1,8 +1,31 @@
 package com.example.programmers.lv1.v30;
+import java.util.*;
 
 public class Q30 {
+
     class Solution {
-        public int[] solution(int[] arr) {
+        public ArrayList<Integer> solution(int[] arr) {
+
+            ArrayList<Integer> answer = new ArrayList<>();
+
+            if(arr.length == 1) answer.add(-1);
+
+            int min = Integer.MAX_VALUE;
+            for(int a : arr) {
+                if(min > a) min = a;
+            }
+
+            for(int a : arr) {
+                if(min != a) answer.add(a);
+            }
+
+            return answer;
+        }
+    }
+}
+
+/*  다른 풀이
+public int[] solution(int[] arr) {
 
             if(arr.length == 1) return new int[] {-1};
 
@@ -20,8 +43,8 @@ public class Q30 {
 
             return answer;
         }
-    }
-}
+
+* */
 
 /*
 제일 작은 수 제거하기
