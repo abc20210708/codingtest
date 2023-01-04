@@ -3,7 +3,20 @@ package com.example.programmers.lv1.v20;
 public class Q25 {
     class Solution {
         public int solution(int n) {
-            int answer = 0;
+            int answer = 2;
+
+            while(true) {
+                if(n % answer == 1) break;
+                answer++;
+            }
+
+            return answer;
+        }
+    }
+}
+
+/* 다른 풀이
+int answer = 0;
 
             for(int i = 2; i < n; i++) {
                 if(n % i == 1) {
@@ -14,9 +27,7 @@ public class Q25 {
             }
 
             return answer;
-        }
-    }
-}
+*/
 
 /*
 나머지가 1이 되는 수 찾기
