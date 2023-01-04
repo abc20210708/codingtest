@@ -2,7 +2,7 @@ package com.example.programmers.lv1.v20;
 
 public class Q23 {
     public boolean solution(int x) {
-        
+
         int sum = 0;
         int num = x;
 
