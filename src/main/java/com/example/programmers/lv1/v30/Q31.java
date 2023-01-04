@@ -3,6 +3,15 @@ package com.example.programmers.lv1.v30;
 public class Q31 {
     public int solution(int[] absolutes, boolean[] signs) {
         int answer = 0;
+        for (int i = 0; i < absolutes.length; i++) {
+            answer += (signs[i]) ? absolutes[i] : -absolutes[i];
+        }
+        return answer;
+    }
+}
+
+/* 다른 풀이
+ int answer = 0;
 
         for(int i = 0; i < signs.length; i++) {
             if(!signs[i]) absolutes[i] *= -1;
@@ -10,8 +19,7 @@ public class Q31 {
         }
 
         return answer;
-    }
-}
+* */
 
 /*
 음양 더하기
