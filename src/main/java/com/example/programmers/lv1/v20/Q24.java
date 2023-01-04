@@ -1,11 +1,21 @@
 package com.example.programmers.lv1.v20;
 import java.util.*;
 public class Q24 {
+    public long solution(long n) {
+        //String[] str = String.valueOf(n).split("");
+        String[] str = Long.toString(n).split("");
+        Arrays.sort(str);
 
+        StringBuilder sb = new StringBuilder();
+        for(String s : str) sb.append(s);
 
-    class Solution {
-        public long solution(long n) {
-            long answer = 0;
+        return Long.parseLong(sb.reverse().toString());
+    }
+
+}
+
+/* 다른 풀이
+long answer = 0;
 
             String[] str = Long.toString(n).split("");
             Arrays.sort(str);
@@ -16,9 +26,7 @@ public class Q24 {
             }
 
             return Long.parseLong(result);
-        }
-    }
-}
+* */
 
 /*
 정수 내림차순으로 배치하기
