@@ -2,16 +2,13 @@ package com.example.programmers.lv1.v20;
 
 public class Q28 {
     public String solution(String phone_number) {
-        String answer = "";
-        int len = phone_number.length() -4;
+        char[] ch = phone_number.toCharArray();
 
-        for(int i = 0; i < len; i++) {
-            answer += "*";
+        for(int i = 0; i < phone_number.length()-4; i++) {
+            ch[i] = '*';
         }
 
-        answer += phone_number.substring(len);
-
-        return answer;
+        return String.valueOf(ch);
     }
 }
 
@@ -26,6 +23,19 @@ String answer = "";
                 answer += phone_number.charAt(i);
             }
         }
+
+        return answer;
+* */
+
+/* 다른 풀이 2
+    String answer = "";
+        int len = phone_number.length() -4;
+
+        for(int i = 0; i < len; i++) {
+            answer += "*";
+        }
+
+        answer += phone_number.substring(len);
 
         return answer;
 * */
