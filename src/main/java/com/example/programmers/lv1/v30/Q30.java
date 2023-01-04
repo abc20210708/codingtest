@@ -16,7 +16,7 @@ public class Q30 {
                 min = Math.min(min, i);
             }
             * */
-            
+
             int min = Integer.MAX_VALUE;
             for(int a : arr) {
                 if(min > a) min = a;
