@@ -16,6 +16,24 @@ public class Q41 {
     }
 }
 
+/* 다른 풀이
+
+        int len = 1;
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] != arr[i - 1]) len++;
+        }
+
+        int[] nums = new int[len];
+        nums[0] = arr[0];
+
+        int idx = 1;
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] != arr[i - 1]) nums[idx++] = arr[i];
+        }
+
+        return nums;
+* */
+
 /*
 같은 숫자는 싫어
 문제 설명
