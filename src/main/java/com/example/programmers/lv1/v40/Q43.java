@@ -3,26 +3,40 @@ package com.example.programmers.lv1.v40;
 public class Q43 {
     class Solution {
         public int solution(int n) {
-
-            //3진법
-            int num = n;
             String str = "";
-            while(num > 0) {
-                str += (num % 3) + "";
-                num /= 3;
+
+            while(n > 0) {
+                str = (n % 3) + a;
+                n /= 3;
             }
 
-            int answer = 0;
-            int idx = 0;
-            for(int i = str.length() -1; i >= 0; i--) {
-                int number = str.charAt(i) - '0';
-                answer += (Math.pow(3, idx++)) * number;
-            }
+            str = new StringBuilder(str).reverse().toString();
 
-            return answer;
+            return Integer.parseInt(str, 3);
+
         }
     }
 }
+
+
+/* 다른 풀이
+    //3진법
+    int num = n;
+    String str = "";
+    while(num > 0) {
+        str += (num % 3) + "";
+        num /= 3;
+    }
+
+    int answer = 0;
+    int idx = 0;
+    for(int i = str.length() -1; i >= 0; i--) {
+        int number = str.charAt(i) - '0';
+        answer += (Math.pow(3, idx++)) * number;
+    }
+
+    return answer;
+* */
 
 /*
 3진법 뒤집기
