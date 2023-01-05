@@ -3,16 +3,14 @@ package com.example.programmers.lv1.v40;
 public class Q43 {
     class Solution {
         public int solution(int n) {
-            String str = "";
+            String a = "";
 
-            while(n > 0) {
-                str = (n % 3) + a;
+            while(n > 0){
+                a += (n % 3) + "";
                 n /= 3;
             }
 
-            str = new StringBuilder(str).reverse().toString();
-
-            return Integer.parseInt(str, 3);
+            return Integer.parseInt(a,3);
 
         }
     }
