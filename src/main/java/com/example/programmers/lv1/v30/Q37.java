@@ -2,6 +2,17 @@ package com.example.programmers.lv1.v30;
 
 public class Q37 {
         public long solution(int price, int money, int count) {
+            long answer = money;
+
+            for(int i =0; i < count; i++) {
+                answer -= (price * (i + 1));
+            }
+
+            return (answer > 0 ? 0 : -answer);
+        }
+}
+
+/* 다른 풀이
 
             long answer = 0;
             long sum = 0;
@@ -15,8 +26,7 @@ public class Q37 {
             if(answer - money < 0) return 0;
 
             return answer - money;
-        }
-}
+* */
 
 /*
 부족한 금액 계산하기
