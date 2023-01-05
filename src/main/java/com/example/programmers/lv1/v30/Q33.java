@@ -15,6 +15,12 @@ public class Q33 {
     }
 }
 
+/* 다른 풀이
+String result = "";
+    for (int i = 0; i < n; i++)
+      result += i % 2 == 0 ? "수" : "박";
+        return result;
+* */
 
 /*
 수박수박수박수박수박수?
