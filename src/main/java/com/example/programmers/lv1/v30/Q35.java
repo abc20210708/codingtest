@@ -4,7 +4,23 @@ import java.util.*;
 public class Q35 {
   class Solution {
         public int solution(int left, int right) {
-            ArrayList<Integer> list = new ArrayList<>(); //left right
+            int answer = 0;
+
+
+            for(int i = left; i <= right; i++) {
+                //제곱수인 경우 약수의 개수가 홀수
+                if(i % Math.sqrt(i) == 0) answer -= i;
+                //제곱수가 아닌 경우 약수의 개수가 짝수
+                else answer += i;
+            }
+
+            return answer;
+        }
+    }
+}
+
+/* 다른 풀이
+ArrayList<Integer> list = new ArrayList<>(); //left right
             ArrayList<Integer> numbers = new ArrayList<>();//cnt
 
             //left부터 right까지 모든 수
@@ -31,9 +47,7 @@ public class Q35 {
             }
 
             return sum;
-        }
-    }
-}
+* */
 
 /*
 약수의 개수와 덧셈
