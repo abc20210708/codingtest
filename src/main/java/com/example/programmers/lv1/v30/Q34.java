@@ -4,8 +4,20 @@ import java.util.*;
 public class Q34 {
     class Solution {
         public String solution(String s) {
-
+            String[] str = s.split("");
+            Arrays.sort(str, Collections.reverseOrder());
             StringBuilder sb = new StringBuilder();
+
+            for(String st: str) {
+                sb.append(st);
+            }
+            return  sb.toString();
+        }
+    }
+}
+
+/* 다른 풀이
+StringBuilder sb = new StringBuilder();
 
             char[] ch = s.toCharArray();
             Arrays.sort(ch);
@@ -15,9 +27,7 @@ public class Q34 {
             }
 
             return sb.reverse().toString();
-        }
-    }
-}
+* */
 
 /*
 문자열 내림차순으로 배치하기
