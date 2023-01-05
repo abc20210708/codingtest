@@ -1,9 +1,23 @@
 package com.example.programmers.lv1.v30;
 
 public class Q36 {
-    
         public boolean solution(String s) {
             boolean answer = true;
+
+            if(!(s.length() == 4 || s.length() == 6)) return false;
+
+            if(s.length() == 4 || s.length() == 6) {
+                for(int i = 0; i < s.length(); i++) {
+                    if(s.charAt(i) < '0' || s.charAt(i) > '9') return false;
+                }
+            }
+
+            return answer;
+        }
+}
+
+/* 다른 풀이
+boolean answer = true;
 
             //65 ~ 90 대, 97 ~ 122 소
             if(!(s.length() == 4 || s.length() == 6)) return false;
@@ -20,9 +34,7 @@ public class Q36 {
             }
 
             return answer;
-        }
-
-}
+* */
 
 /*
 문자열 다루기 기본
