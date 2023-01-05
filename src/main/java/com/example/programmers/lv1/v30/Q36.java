@@ -16,6 +16,9 @@ public class Q36 {
         }
 }
 
+//if (s.length() == 4 || s.length() == 6) return s.matches("(^[0-9]*$)");
+//        return false;
+
 /* 다른 풀이
 boolean answer = true;
 
