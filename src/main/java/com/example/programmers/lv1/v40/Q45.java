@@ -3,7 +3,27 @@ package com.example.programmers.lv1.v40;
 public class Q45 {
     class Solution {
         public String solution(String s, int n) {
-            String answer = "";
+            StringBuilder sb = new StringBuilder();
+
+            for(int i = 0; i < s.length(); i++) {
+                char ch = s.charAt(i);
+
+                if(Character.isUpperCase(ch)) {
+                    sb.append(n + ch <= 'Z' ? (char) (n + ch) : (char) (n + ch - 26));
+                } else if(Character.isLowerCase(ch)) {
+                    sb.append(n + ch <= 'z' ? (char) (n + ch) : (char) (n + ch - 26));
+                } else {
+                    sb.append(ch);
+                }
+            }
+
+            return sb.toString();
+        }
+    }
+}
+
+/*
+String answer = "";
 
             for(int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
@@ -19,9 +39,7 @@ public class Q45 {
             }
 
             return answer;
-        }
-    }
-}
+* */
 /*
 시저 암호
 문제 설명
