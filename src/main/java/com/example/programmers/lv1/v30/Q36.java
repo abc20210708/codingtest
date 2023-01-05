@@ -16,6 +16,7 @@ public class Q36 {
         }
 }
 
+//"^[0-9]*$"; // 숫자만 등장하는지
 //if (s.length() == 4 || s.length() == 6) return s.matches("(^[0-9]*$)");
 //        return false;
 
