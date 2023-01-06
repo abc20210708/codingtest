@@ -1,6 +1,56 @@
 package com.example.programmers.lv2.v10;
 import java.util.*;
 public class Q11 {
+    class Solution {
+        HashSet<Integer> set = new HashSet<>();
+
+        public boolean isPrime(int num) {
+            //1. 0과 1은 소수가 아니다
+            if (num == 0 || num == 1)
+                return false;
+            //2. limit 숫자를 계산
+            int limit = (int) Math.sqrt(num);
+            //3. limit까지 배수 여부를 확인
+            for (int i = 2; i <= limit; i++) {
+                if (num % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+
+        public void mix(String a, String b) {
+            //1. 현재 조합을 set에 추가
+            if (!a.equals(""))
+                set.add(Integer.parseInt(a));
+
+            //2. 남은 숫자 중 한 개를 더해 새로운 조합을 만든다.
+            for (int i = 0; i < b.length(); i++) {
+                mix(a + b.charAt(i), b.substring(0, i) + b.substring(i + 1));
+            }
+        }
+
+        public int solution(String numbers) {
+
+            //1. 모든 조합의 숫자를 만든다.
+            mix("", numbers);
+
+            //2. 소수의 개수만 센다.
+            int cnt = 0;
+            Iterator<Integer> it = set.iterator();
+            while (it.hasNext()) {
+                int num = it.next();
+                if (isPrime(num)) cnt++;
+            }
+
+            //3. 소수의 개수를 반환한다.
+            return cnt;
+        }
+    }
+}
+
+/*다른 풀이
+
     class Solution{
         HashSet<Integer> set = new HashSet<>();//중복값 제거 위한 set
         char[] arr; //종이조각
@@ -52,55 +102,6 @@ public class Q11 {
     }
 
 }
-
-/*다른 풀이
-
-    class Solution {
-        HashSet<Integer> set = new HashSet<>();
-
-        public boolean isPrime(int num) {
-            //1. 0과 1은 소수가 아니다
-            if(num == 0 || num == 1)
-                return false;
-            //2. limit 숫자를 계산
-            int limit = (int)Math.sqrt(num);
-            //3. limit까지 배수 여부를 확인
-            for(int i= 2; i <= limit; i++) {
-                if(num % i == 0)
-                    return false;
-            }
-
-            return true;
-        }
-
-        public void mix(String a, String b) {
-            //1. 현재 조합을 set에 추가
-            if(!a.equals(""))
-                set.add(Integer.parseInt(a));
-
-            //2. 남은 숫자 중 한 개를 더해 새로운 조합을 만든다.
-            for(int i = 0; i < b.length(); i++) {
-                mix(a + b.charAt(i), b.substring(0, i) + b.substring(i + 1));
-            }
-        }
-
-        public int solution(String numbers) {
-
-            //1. 모든 조합의 숫자를 만든다.
-            mix("", numbers);
-
-            //2. 소수의 개수만 센다.
-            int cnt = 0;
-            Iterator<Integer> it = set.iterator();
-            while(it.hasNext()) {
-                int num = it.next();
-                if(isPrime(num)) cnt++;
-            }
-
-            //3. 소수의 개수를 반환한다.
-            return cnt;
-        }
-    }
   */
 
 /*
