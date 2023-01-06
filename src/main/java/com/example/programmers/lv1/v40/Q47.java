@@ -37,6 +37,38 @@ public class Q47 {
         }
     }
 }
+
+/* 다른 풀이
+
+class Solution {
+  public String[] solution(int n, int[] arr1, int[] arr2) {
+
+        String[] answer = new String[n];
+        int[] temp = new int[n];
+        String[] str = new String[n];
+
+        for(int i = 0 ; i < arr1.length; i++){
+            temp[i] = arr1[i] | arr2[i];
+            str[i] = Integer.toBinaryString(temp[i]);
+        }
+
+        for(int i = 0; i < str.length; i++){
+            if(str[i].length() != n){
+                for(int j = str[i].length(); j < n; j++){
+                    str[i] = "0" + str[i];
+                }
+            }
+
+            answer[i] = str[i].replaceAll("1", "#").replaceAll("0", " ");
+
+        }
+
+        return answer;
+  }
+}
+
+* */
+
 /**
  [1차] 비밀지도
  문제 설명
@@ -79,4 +111,3 @@ public class Q47 {
  arr2	[27 ,56, 19, 14, 14, 10]
  출력	["######", "### #", "## ##", " #### ", " #####", "### # "]
  */
-/
