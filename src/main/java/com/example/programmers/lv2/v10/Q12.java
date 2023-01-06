@@ -5,24 +5,20 @@ public class Q12 {
         public int[] solution(int brown, int yellow) {
             int[] answer = {0, 0};
 
-            int num = brown + yellow;
+            int num = brown + yellow;// 전체 격자 개수
 
-            //행과 열의 개수는 3 이상이여야 한다.
-            for(int i = 3; i <= num; i++) {
-                int col = i; //열
-                int row = num / col; //행
+            for(int i = 1; i <= num; i++) {
+                int h = i; //세로
+                int w = num / h; //가로
 
-                //행의 개수가 3 이하면 skip
-                if(row < 3) continue;
+                //카펫의 가로의 길이는 세로의 길이와 같거나,
+                // 세로의 길이보다 길다
+                if(h > w) continue;
 
-                //행은 열보다 크거나 같아야한다.
-                if(row >= col) {
-                    //문제의 규칙에 의하면 row - 2 * col - 2 == yellow
-                    if((row - 2) * (col - 2) == yellow){
-                        answer[0] = row;
-                        answer[1] = col;
-                        break;
-                    }
+                if((h - 2) * (w - 2) == yellow) {
+                    answer[0] = w;
+                    answer[1] = h;
+                    return answer;
                 }
             }
 
