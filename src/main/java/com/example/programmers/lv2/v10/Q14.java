@@ -2,6 +2,34 @@ package com.example.programmers.lv2.v10;
 
 public class Q14 {
     class Solution {
+        char[] ch = {'A', 'E', 'I', 'O', 'U'};
+        int answer = 0;
+        int cnt = 0;
+
+        public int solution(String word) {
+            dfs("", word);
+            return answer;
+        }
+
+        public void dfs(String cur, String word) {
+            if(cur.equals(word)) {
+                answer = cnt;
+                return;
+            }
+
+            if(cur.length() >= 5) return;
+
+            for(int i = 0; i < 5; i++) {
+                cnt++;
+                dfs(cur + ch[i], word);
+            }
+        }
+
+    }
+}
+
+/* 다른 풀이
+class Solution {
         int result = 0;
         boolean isEqual = false;
 
@@ -30,7 +58,7 @@ public class Q14 {
 
         }
     }
-}
+* */
 
 /*
 모음 사전
