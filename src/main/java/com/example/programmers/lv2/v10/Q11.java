@@ -51,7 +51,9 @@ public class Q11 {
 
 /*다른 풀이
 
-    class Solution{
+    import java.util.*;
+
+class Solution{
         HashSet<Integer> set = new HashSet<>();//중복값 제거 위한 set
         char[] arr; //종이조각
         boolean[] visited; //사용여부
@@ -79,7 +81,7 @@ public class Q11 {
                 num = Integer.parseInt(str);
                 if(isPrime(num)) set.add(num); //소수판별
             }
-            if(idx === arr.length) return;
+            if(idx == arr.length) return;
 
             for(int i = 0; i < arr.length; i++) {
                 if(visited[i]) continue;
@@ -101,7 +103,6 @@ public class Q11 {
 
     }
 
-}
   */
 
 /*
