@@ -22,6 +22,24 @@ public class Q55 {
         }
     }
 }
+
+/* 다른 풀이
+class Solution {
+        public String solution(int[] food) {
+
+            StringBuilder build = new StringBuilder();
+
+            for(int i=1; i<food.length; i++) {
+                for(int q=0; q<food[i]/2; q++) {
+                    build.append(i);
+                }
+            }
+            String answer = build.toString()+"0"+build.reverse().toString();
+            return answer;
+        }
+    }
+* */
+
 /*
 푸드 파이트 대회
 문제 설명
