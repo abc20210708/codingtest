@@ -4,7 +4,6 @@ import java.util.HashSet;
 
 public class Q49 {
     public Integer[] solution(int[] numbers) {
-
         HashSet<Integer> set = new HashSet<>();
 
         for(int i = 0; i < numbers.length -1; i++) {
@@ -19,6 +18,29 @@ public class Q49 {
         return arr;
     }
 }
+
+/* 다른 풀이
+
+
+        HashSet<Integer> set = new HashSet<>();
+
+        for(int i = 0; i < numbers.length -1; i++) {
+            for(int j = i + 1; j < numbers.length; j++) {
+                set.add(numbers[i] + numbers[j]);
+            }
+        }
+
+        int len = set.size();
+        int[] answer = new int[len];
+        int idx = 0;
+        for(int s : set) {
+            answer[idx++] = s;
+        }
+
+        Arrays.sort(answer);
+        return answer;
+* */
+
 /*
 두 개 뽑아서 더하기
 문제 설명
