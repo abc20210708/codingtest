@@ -35,6 +35,35 @@ public class Q57 {
 
     }
 }
+
+/* 다른 풀이
+import java.util.*;
+
+class Solution {
+    public int[] solution(int k, int[] score) {
+
+        int[] answer = new int[score.length];
+        List<Integer> topList = new ArrayList<>(); //명예의 전당 리스트
+
+        for(int i = 0; i < score.length; i++) {
+
+            if(topList.size() < k) {
+                topList.add(score[i]);
+            } else {
+                if(topList.get(0) < score[i]) topList.set(0, score[i]);
+                }
+
+            Collections.sort(topList); //내림차순 정렬
+
+            answer[i] = topList.get(0);
+            }
+               return answer;
+        }
+
+    }
+
+
+* */
 /*
 명예의 전당 (1)
 문제 설명
@@ -55,7 +84,6 @@ k일 다음부터는 출연 가수의 점수가 기존의 명예의 전당
 [10, 100, 20, 150, 1, 100, 200]이라면, 명예의 전당에서
 발표된 점수는 아래의 그림과 같이 [10, 10, 10, 20, 20, 100, 100]입니다.
 
-그림1.png
 
 명예의 전당 목록의 점수의 개수 k, 1일부터 마지막 날까지 출연한
 가수들의 점수인 score가 주어졌을 때, 매일 발표된 명예의
