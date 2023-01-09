@@ -1,28 +1,39 @@
 package com.example.etc.special.sort;
 
+import java.util.Arrays;
+
 public class InsertionSort {
 
-    public static void main(String[] args) {
-        int[] arr = {10, 2, 6, 4, 3, 7, 5};
+    static void insertSort(int[] arr) {
 
-        for(int i = 1; i < arr.length; i++) {
-            int standard = arr[i]; //기준
-            int aux = i -1; //비교할 대상
+        for (int i = 1; i < arr.length; i++) {
 
-            while (aux >= 0 && standard < arr[aux]) {
-                arr[aux +1] = arr[aux]; //비교대상이 큰 경우 오른쪽으로 밀어냄
+            //삽입될 위치를 저장하기 위한 idx
+            int idx = i;
+            //현재 정렬 대상 값
+            int temp = arr[i];
 
-                aux--;
+            //1. 이미 정렬된 배열에서 현재 정렬대상 값이 삽입될 위치(인덱스를 찹는다.
+            //2. 현재 정렬대상 값보다 큰 값은 뒤로 한 칸씩 이동
+            while ((idx > 0) && (arr[idx -1] > temp)) {
+                arr[idx]  = arr[idx -1];
+                idx--;
             }
-            arr[aux + 1] = standard; //기준값 저장
+
+            //삽입될 위치에 temp삽입
+            arr[idx] = temp;
         }
-        printArr(arr);
+
     }
 
-    public static void printArr(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
-        }
+    public static void main(String[] args) {
+        int[] arr =  {3, 1, 2, 6, 7 , 5, 4};
+
+        //삽입 정렬
+        insertSort(arr);
+
+        //결과 출력
+        System.out.println(Arrays.toString(arr));
     }
 }
 
