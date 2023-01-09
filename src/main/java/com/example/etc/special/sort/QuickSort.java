@@ -1,4 +1,4 @@
-package com.example.etc.special;
+package com.example.etc.special.sort;
 
 public class QuickSort {
 
