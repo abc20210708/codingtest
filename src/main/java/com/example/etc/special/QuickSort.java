@@ -1,64 +1,22 @@
 package com.example.etc.special;
 
 public class QuickSort {
-//출처 블로그 https://creatordev.tistory.com/70
-    public static void main(String[] args){
 
-        int array[] = {5, 7, 9, 0, 3, 1, 6, 2, 4, 8};
-
-        quickSort(array, 0, array.length -1);
-
-        for (int i : array) {
-            System.out.printf("%d ",i);
-        }
-    }
-
-    public static int partition(int[] arr, int start, int end) {
-
-        int pivot = arr[(start + end) /2];
-
-        while(start < end) {
-            while ((arr[start] < pivot) && (start < end))
-                start++;
-            while((arr[end] > pivot) && (start < end))
-                end--;
-
-            if(start < end) {
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
-            }
-        }
-
-        return start;
-    }
-
-    public static void quickSort(int[] arr, int start, int end) {
-
-        if(start < end) {
-            int pivotNewIdx = partition(arr, start, end);
-
-            quickSort(arr, start, pivotNewIdx -1);
-            quickSort(arr, pivotNewIdx +1, end);
-        }
-
-    }
 }
 
-/* 퀵 정렬(QuickSort)이란?
+/* 퀵 정렬(QuickSort)은 중심점(pivot Point)을 임의로 고른 후, 이 중심점보다 작은 수를
+    한 쪽으로 분류하고 큰 수들은 다른 쪽으로 분류하여 정렬하는 방법입니다.
 
-분할 작업을 순환적으로 반복하면서 피봇의 왼쪽 부분 집합과 오른쪽 부분집합을 정렬하는 방법
+    중심점의 왼쪽에 있는 숫자들은 오른쪽에 있는 숫자들과 비교할 필요가 없습니다.
+    리스트를 분리하여 따로 비교하므로, 평균저인 경우에 시간 복잡도는 O(nlongn)입니다.
 
- 1. 전체 원소 가운데 하나의 원소를 중심(pivot)으로 2개의 부분 집합으로 분할한다.
- 2. 기준값(pivot)보다 작은 원소는 왼쪽 부분 집합으로, 기준값보다 큰 원소들은
-     오른쪽 부분 집합으로 정렬한다.
- 3. 분할된 부분집합의 크기가 0이나 1이 될때까지 순환 호출을 이용하여 다시 분할한다.
-
- 피봇을 결정하는데에 크게 두 가지 방법이 있는데
- 1. 난수 분할(랜덤)
- 2. 중위법 (좌측 끝, 중앙, 우측 끝)
-
- 난수 분할은 성능과 안정성이 떨어지기 때문에, 중위법(중앙)에서 분할 작업이 이루어진다.
- 
+    퀵 정렬은 다음과 같은 순서로 이뤄집니다.
+    1. 중심점을 선택합니다. 주로 리스트의 중간에 있는 숫자 혹은 마지막에 있는 숫자를 선택합니다.
+    2. 마지막 요소와 중심점의 위치를 바꿔 중심점을 리스트의 가장 끝으로 보냅니다.
+    3. 2개의 카운터를 사용하여 리스트의 처음부터 탐색합니다. 첫 번째 카운터에는 중심점보다
+       큰 숫자의 위치를 저장하고, 두 번째 카운터에는 현재 탐색하고 있는 위치를 저장합니다.
+   4. 탐색하여 중심점보다 작은 숫자를 발견하면 첫 번째 카운터의 숫자 위치와 바꿔줍니다.
+   5. 3,4 과정을 반복하면 중심점보다 큰 수와 중심점보다 작은 수가 나눠지게 됩니다.
+   6. 다시 중심점을 선택하여 2 ~ 5 과정을 반복하면 리스트가 정렬됩니다.
 
 * */
