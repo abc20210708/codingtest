@@ -22,7 +22,7 @@ public class FactorialCount_1 {
         System.out.println(count);
 
     }
-    
+
 }
 
 /*
