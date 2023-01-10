@@ -1,4 +1,17 @@
 package com.example.etc.special.fibonacci;
-
+//참고 블로그 https://techhan.github.io/algorithm/programmers-46/
 public class Fibonacci_5 {
+    public int solution(int n) {
+        int answer = 0;
+        if(n == 1 || n == 0) return 1;
+        int a = 0;
+        int b = 1;
+
+        for (int i = 2; i <= n ; i++) {
+            answer = (a + b) % 1234567;
+            a = b;
+            b = answer;
+        }
+        return answer;
+    }
 }
