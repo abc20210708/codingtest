@@ -2,7 +2,7 @@ package com.example.etc.special.prime;
 
 import java.util.Scanner;
 
-//소수 판별 
+//소수 판별
 public class Prime_3 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
