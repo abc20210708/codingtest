@@ -13,7 +13,7 @@ public class InsertionSort {
             //현재 정렬 대상 값
             int temp = arr[i];
 
-            //1. 이미 정렬된 배열에서 현재 정렬대상 값이 삽입될 위치(인덱스를 찹는다.
+            //1. 이미 정렬된 배열에서 현재 정렬대상 값이 삽입될 위치(인덱스)를 찾는다.
             //2. 현재 정렬대상 값보다 큰 값은 뒤로 한 칸씩 이동
             while ((idx > 0) && (arr[idx -1] > temp)) {
                 arr[idx]  = arr[idx -1];

@@ -28,7 +28,7 @@ public class NumberCount_2 {
     BufferedReader는 문자열로 반환되니 String을 Int형으로 변환해야함
     String에서 Int로 변환하는 메소드는 Integer.parseInt()다.
 
-    이 방법은 첫 번째 방법에 비해 알고리즘상 시간봅작도가 O(N)이라 훨씬 수행속도가 짧다.
+    이 방법은 첫 번째 방법에 비해 알고리즘상 시간복잡도가 O(N)이라 훨씬 수행속도가 짧다.
     또한 BufferedReader 자체가 Scanner 에 비해
     우월한 성능을 지니고 있어 훨씬 좋은 performance 를 보여준다.
 
@@ -40,6 +40,6 @@ public class NumberCount_2 {
     for문을 통해 해당 문자열의 문자 값 - 48(또는 - '0')을 추출해
     int 배열의 index 값을 1 증가 시킨다.
 
-    마지막으로 배열 원소에 저장된 모든 원소를 출력력
+    마지막으로 배열 원소에 저장된 모든 원소를 출력
 
 * */

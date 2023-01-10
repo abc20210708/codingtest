@@ -1,6 +1,5 @@
 package com.example.etc.special.prime;
 
-import javax.sound.midi.SysexMessage;
 import java.util.Scanner;
 
 //N 이하의 모든 소수를 구하는 알고리즘
