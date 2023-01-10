@@ -2,20 +2,17 @@ package com.example.etc.special.prime;
 
 import java.util.Scanner;
 
+//소수 판별 
 public class Prime_3 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int N = in.nextInt();
+        is_prime(in.nextInt());
 
-        // 0 ~ N까지 수 중 소수를 구하는 반복문
-        for (int i = 0; i < N; i++) {
-            make_prime(i);
-        }
     }
 
     //소수 생성 메서드
-    public static void make_prime(int num) {
+    public static void is_prime(int num) {
 
         //0과 1은 소수가 아니므로 종료
         if(num < 2) return;
@@ -27,7 +24,7 @@ public class Prime_3 {
         }
 
         // 제곱근 함수 : Math.sqrt()
-        for(int i = 2; i < Math.sqrt(num); i++) {
+        for(int i = 2; i <= Math.sqrt(num); i++) {
 
             //소수가 아닐 경우
             if (num % i == 0) {
@@ -66,5 +63,11 @@ public class Prime_3 {
 
     즉, √N 이하의 자연수 중에 나누어 떨어지는 수가 있다면 이는 1과 N을
     제외한 다른 자연수가 N의 약수라는 의미이므로 소수가 아니게 되는 것이다.
+
+    2 이상 √N 이하의 수 중에 나누어 떨어지는 수가 존재한다면 소수가 아님을
+    이용한 소수 판별법이다.
+
+    또한, 위 알고리즘의 시간복잡도는 당연히 √N이하의 수까지 모든 수를
+    검사하므로 O(√N)이다.
 
 * */
