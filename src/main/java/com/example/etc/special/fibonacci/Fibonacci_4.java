@@ -1,5 +1,5 @@
 package com.example.etc.special.fibonacci;
-
+//참고 블로그 https://hyojun.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98-%EC%88%98-Java
 public class Fibonacci_4 {
     static int[] data = new int[100001]; //최댓값 100,000
 
