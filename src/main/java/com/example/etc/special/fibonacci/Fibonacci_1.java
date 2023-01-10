@@ -3,6 +3,8 @@ package com.example.etc.special.fibonacci;
 //참고 블로그 https://marobiana.tistory.com/80
 public class Fibonacci_1 {
     public static void main(String[] args) {
+        //피보나치 수열을 입력 받은 숫자 개수만큼 출력
+
         int input = 8; //8개 출력
 
         for (int i = 1; i <= input; i++) {
