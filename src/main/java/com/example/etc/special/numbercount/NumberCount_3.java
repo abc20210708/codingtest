@@ -30,3 +30,4 @@ public class NumberCount_3 {
  그런 뒤 val = val/10; 을 통해 한 자릿수씩 줄여나간다.
 
 * */
+
