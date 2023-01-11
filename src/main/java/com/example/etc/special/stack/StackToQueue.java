@@ -1,4 +1,4 @@
-package com.example.etc.special;
+package com.example.etc.special.stack;
 
 import java.util.Stack;
 //참고 블로그 https://vmpo.tistory.com/123
