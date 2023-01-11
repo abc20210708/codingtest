@@ -1,4 +1,4 @@
-package com.example.etc.special.sqlkit;
+package com.example.etc.special.sqlkit.q01;
 
 public class Q06 {
     /*
