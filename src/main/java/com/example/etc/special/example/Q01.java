@@ -2,7 +2,7 @@ package com.example.etc.special.example;
 
 
 import com.example.etc.MemoTest;
-
+//01. 문자 찾기
 import java.io.IOException;
 import java.util.Scanner;
 //참고 블로그 https://daramgda.tistory.com/89#5.%20%EB%AC%B8%EC%9E%90%20%EC%B0%BE%EA%B8%B0%20%EB%AC%B8%EC%A0%9C%20%ED%92%80%EC%9D%B4
