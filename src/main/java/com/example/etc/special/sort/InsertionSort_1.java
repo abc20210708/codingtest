@@ -2,7 +2,7 @@ package com.example.etc.special.sort;
 
 import java.util.Arrays;
 
-public class InsertionSort {
+public class InsertionSort_1 {
 
     static void insertSort(int[] arr) {
 
