@@ -25,7 +25,12 @@ public class ArrayStack {
         stack[top--] = 0;
     }
 
-
+/*
+배열을 초기화 해줄때 int [] stack = new int [5]을 하게되면
+배열의 크기는 5가 되고 값은 null 초기화 됩니다.
+배열의 값들을 제거할때는 배열의 데이터 형태가 int형태이므로
+null이 아닌 0값을 임의로 넣어줬습니다.
+* */
 
 }
 /*
