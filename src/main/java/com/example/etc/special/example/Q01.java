@@ -30,11 +30,19 @@ public class Q01 {
     public static void main(String[] args) throws IOException {
 
         Q01 mm = new Q01();
+        //자바에서 데이터는 스트림을 통해 입출려 됩니다.
+        //스트림은 단일 방향으로 연속적으로 흘러가는 것을 말한다.
+        //물이 높은 곳 -> 낮은 곳으로 흐르듯 , 데이터는 출발지에서 나와 도착지로 흘러간다.
+        //https://coding-factory.tistory.com/281
+        // 출발지(키보드, 마우스) => 입력스트림 -> 도착지(프로그램)
+        // => 출발지(프로그램) => 출력스트림 => 도착지(모니터, 프린터)
 
+            //System.in은 사용자로부터 입력을 받기 위한 입력 스트림
         Scanner sc = new Scanner(System.in);
 
         String str = sc.next();
         char c = sc.next().charAt(0);
+        //charAt : String을 index로 접근
 
         System.out.println(mm.solution(str, c));
 
