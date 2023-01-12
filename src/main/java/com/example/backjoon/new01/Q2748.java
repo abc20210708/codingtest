@@ -2,7 +2,7 @@ package com.example.backjoon.new01;
 
 import java.util.Scanner;
 //참고 블로그 https://st-lab.tistory.com/123
-public class Q10870 {
+public class Q2748 {
     static long[] fiboArr;
 
     public static void main(String[] args) {
