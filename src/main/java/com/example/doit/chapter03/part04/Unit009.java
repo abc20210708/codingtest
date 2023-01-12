@@ -1,4 +1,4 @@
-package com.example.chapter03.part04;
+package com.example.doit.chapter03.part04;
 
 import java.io.BufferedReader;
 import java.io.IOException;

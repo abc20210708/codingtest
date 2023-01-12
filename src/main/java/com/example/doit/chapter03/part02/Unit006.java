@@ -1,4 +1,4 @@
-package com.example.chapter03.part02;
+package com.example.doit.chapter03.part02;
 
 import java.util.Scanner;
 

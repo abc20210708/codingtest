@@ -1,8 +1,8 @@
-package com.example.softeer;
+package com.example.etc.e00;
 import java.util.*;
 import java.io.*;
 
-public class Q01 {
+public class Softeer01 {
         public void main(String args[]) throws IOException
         {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

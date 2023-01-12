@@ -1,7 +1,7 @@
 package com.example.programmers.lv2.v20;
 
 public class Q20 {
-    
+
 }
 /*
 구명보트

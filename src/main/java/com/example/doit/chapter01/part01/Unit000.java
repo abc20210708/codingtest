@@ -1,4 +1,4 @@
-package com.example.chapter01.part01;
+package com.example.doit.chapter01.part01;
 
 /*
  시간 복잡도 유형

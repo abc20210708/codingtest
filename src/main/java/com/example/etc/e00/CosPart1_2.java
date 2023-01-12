@@ -1,6 +1,6 @@
-package com.example.cos;
+package com.example.etc.e00;
 
-public class Part1_2 {
+public class CosPart1_2 {
 
     /*
     해밍 거리(Hamming distance)란 같은 길이를 가진 두 개의 문자열에서 같은 위치에 있지만 서로 다른 문자의 개수를 뜻합니다.
@@ -33,7 +33,7 @@ public class Part1_2 {
 
     // 아래는 테스트케이스 출력을 해보기 위한 main 메소드입니다.
     public static void main(String[] args) {
-        Part1_2 sol = new Part1_2();
+        CosPart1_2 sol = new CosPart1_2();
         String binaryA = "10010";
         String binaryB = "110";
         int ret = sol.solution(binaryA, binaryB);

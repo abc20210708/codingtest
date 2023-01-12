@@ -1,4 +1,4 @@
-package com.example.chapter03.part05;
+package com.example.doit.chapter03.part05;
 
 import java.util.Scanner;
 import java.util.Stack;
