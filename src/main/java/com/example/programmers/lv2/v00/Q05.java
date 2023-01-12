@@ -16,12 +16,16 @@ public class Q05 {
 
             //배열 정렬
             //정렬 규칙으로 2개를 더해 더 큰 쪽이 우선순위가 있도록 정렬
+            Arrays.sort(arr, (s1, s2) -> (s2 + s1).compareTo(s1 + s2));
+            /*
             Arrays.sort(arr, new Comparator<String>() {
                 @Override
                 public int compare(String s1, String s2) {
                     return (s2 + s1).compareTo(s1 + s2);
                 }
             });
+
+            * */
 
             //0000처럼 0으로만 구성되어있으면 0 return
             if (arr[0].equals("0")) return "0";
