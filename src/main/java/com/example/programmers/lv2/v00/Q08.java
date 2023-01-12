@@ -17,6 +17,26 @@ public class Q08 {
     }
 }
 
+/* 다른 풀이
+
+import java.util.*;
+
+class Solution {
+    public boolean solution(String[] phoneBook) {
+        Arrays.sort(phoneBook);
+
+        for(int i = 0; i < phoneBook.length -1; i++) {
+            if(phoneBook[i + 1].startsWith(phoneBook[i]))
+                return false;
+        }
+
+        return true;
+
+    }
+}
+
+* */
+
 /*
 전화번호 목록
 문제 설명
