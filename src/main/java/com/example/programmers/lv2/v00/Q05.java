@@ -10,9 +10,16 @@ public class Q05 {
             for (int i = 0; i < str.length; i++) {
                 str[i] = Integer.toString(numbers[i]);
             }
-
+            //참고 블로그 https://ivory-room.tistory.com/43
             Arrays.sort(str, ((o1, o2) -> (o2 + o1).compareTo(o1 + o2)));
+            /*
+            a.compareTo(b)
+            - 앞에서부터 비교하다 다른 문자열이 나오면 'a-b' 순서로
+            해당 문자의 아스키코드 값을 뺀 결과(int)를 리턴
 
+            내림차순 : (o2+o1).compareTo(o1+o2);
+            오름차순 : (o1+o2).compareTo(o1+o2);
+            * */
             if(str[0].equals("0"))
                 return "0";
 
