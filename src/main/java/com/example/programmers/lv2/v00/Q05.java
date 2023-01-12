@@ -5,37 +5,21 @@ public class Q05 {
 
     class Solution {
         public String solution(int[] numbers) {
-            String answer = "";
+            String answer = "0";
+            String[] str = new String[numbers.length];
 
-            //int 배열을 String 배열로 변환
-            String[] arr = new String[numbers.length];
-
-            for(int i = 0; i < numbers.length; i++) {
-                arr[i] = Integer.toString(numbers[i]);
+            for (int i = 0; i < numbers.length; i++) {
+                str[i] = String.valueOf(numbers[i]);
             }
 
-            //배열 정렬
-            //정렬 규칙으로 2개를 더해 더 큰 쪽이 우선순위가 있도록 정렬
-            Arrays.sort(arr, (s1, s2) -> (s2 + s1).compareTo(s1 + s2));
-            /*
-            Arrays.sort(arr, new Comparator<String>() {
-                @Override
-                public int compare(String s1, String s2) {
-                    return (s2 + s1).compareTo(s1 + s2);
+            Arrays.sort(str, (a, b) -> (b + a).compareTo(a + b));
+            if(!str[0].equals("0")) {
+                StringBuilder sb = new StringBuilder();
+                for(String s : str) {
+                    sb.append(s);
                 }
-            });
-
-            * */
-
-            //0000처럼 0으로만 구성되어있으면 0 return
-            if (arr[0].equals("0")) return "0";
-
-            //그 외의 경우 순차적으로 연결하여 answer return
-            for(int i = 0; i < arr.length; i++) {
-                answer += arr[i];
+                answer = sb.toString();
             }
-
-
             return answer;
         }
     }
@@ -65,6 +49,41 @@ class Solution {
         return answer;
     }
 }
+* */
+
+/* 다른 풀이 2
+  String answer = "";
+
+            //int 배열을 String 배열로 변환
+            String[] arr = new String[numbers.length];
+
+            for(int i = 0; i < numbers.length; i++) {
+                arr[i] = Integer.toString(numbers[i]);
+            }
+
+            //배열 정렬
+            //정렬 규칙으로 2개를 더해 더 큰 쪽이 우선순위가 있도록 정렬
+            Arrays.sort(arr, (s1, s2) -> (s2 + s1).compareTo(s1 + s2));
+            /*
+            Arrays.sort(arr, new Comparator<String>() {
+                @Override
+                public int compare(String s1, String s2) {
+                    return (s2 + s1).compareTo(s1 + s2);
+                }
+            });
+
+            * */
+
+//0000처럼 0으로만 구성되어있으면 0 return
+    /*        if (arr[0].equals("0")) return "0";
+
+                    //그 외의 경우 순차적으로 연결하여 answer return
+                    for(int i = 0; i < arr.length; i++) {
+        answer += arr[i];
+        }
+
+
+        return answer;
 * */
 
 //참고 블로그
