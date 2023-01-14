@@ -1,4 +1,4 @@
-package com.example.backjoon.new01.string;
+package com.example.backjoon.string;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
