@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 
 //참고 블로그 https://velog.io/@yeoj1n/%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-9935%EB%B2%88-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C
+//참고 블로그 https://blackvill.tistory.com/m/86
 public class Q9935 {
     public static void main(String[] args) throws IOException {
 
@@ -17,11 +18,19 @@ public class Q9935 {
         Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < origin.length(); i++) {
+            //입력받은 문자열에서 알파벳으로 나눠서 스택에 넣기
             stack.push(origin.charAt(i));
 
+            //스택의 사이즈가 폭발 문자열의 길이보다 길다면
+            //폭발문자열이 존재할 수 있다.
             if(stack.size() >= remove.length()) {
+                //폭발 문자열이 있는지를 체크하기 위한 변수
                 boolean flag = true;
+
+                //폭발 문자열의 길이만큼 반복
                 for (int j = 0; j < remove.length(); j++) {
+                    //스택의 길이 - 폭발 문자열의 길이를 빼고 거기부터 시작
+                    //폭발 문자열과 다르면 탈출
                     if(stack.get(stack.size() - remove.length() + j) != remove.charAt(j)) {
                         flag = false;
                         break;
