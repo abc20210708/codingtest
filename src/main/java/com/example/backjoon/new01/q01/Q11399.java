@@ -1,4 +1,4 @@
-package com.example.backjoon.new01;
+package com.example.backjoon.new01.q01;
 
 import java.util.Arrays;
 import java.util.Scanner;

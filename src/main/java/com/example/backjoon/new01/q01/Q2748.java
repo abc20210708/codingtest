@@ -1,4 +1,4 @@
-package com.example.backjoon.new01;
+package com.example.backjoon.new01.q01;
 
 import java.util.Scanner;
 //참고 블로그 https://st-lab.tistory.com/123
