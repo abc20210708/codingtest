@@ -4,7 +4,38 @@ import java.io.InputStreamReader;
 
 public class Q21 {
     String solution(String number, int k) {
-        final int SIZE = number.length() - k; //선택 가능한 범위
+       String answer = "";
+       StringBuilder sb = new StringBuilder();
+
+       char[] arr = number.toCharArray();
+
+       int len = arr.length - k;
+
+       //a문자 비교를 시작하는 인덱스를 나타내는 start 변수
+        int start = 0;
+
+        for (int i = 0; i < len; i++) {
+            char max = '0';
+            for (int j = start; j <= i + k; j++) {
+                //가장 큰 수를 골라서 그 다음 인덱스를 시작 인덱스로 설정하기
+                if (arr[j] > max) {
+                    max = arr[j];
+                    start = j + 1;
+                }
+            }
+            //가장 큰 문자를 넣어주기
+            sb.append(Character.toString(max));
+        }
+
+        //k게의 수를 제거할 때 얻을 수 있는 가장 큰 숫자를 구하려 한다.
+        answer = sb.toString();
+        return answer;
+    }
+}
+
+/* 다른 풀이
+
+ final int SIZE = number.length() - k; //선택 가능한 범위
 
         StringBuffer sb = new StringBuffer();
 
@@ -24,11 +55,9 @@ public class Q21 {
         }
 
         return sb.toString();
-    }
-}
+* */
 
-
-/* 다른 풀이
+/* 다른 풀이 2
 import java.util.*;
 
 class Solution {
