@@ -4,32 +4,26 @@ import java.io.InputStreamReader;
 
 public class Q21 {
     String solution(String number, int k) {
-       String answer = "";
        StringBuilder sb = new StringBuilder();
+       int idx = 0;
+       int next = 0;
 
-       char[] arr = number.toCharArray();
+        for (int i = 0; i < number.length() - k; i++) {
+            int max = 0;
 
-       int len = arr.length - k;
+            for (int j = idx; j <= i + k; j++) {
+                int current = number.charAt(j) - '0';
 
-       //a문자 비교를 시작하는 인덱스를 나타내는 start 변수
-        int start = 0;
-
-        for (int i = 0; i < len; i++) {
-            char max = '0';
-            for (int j = start; j <= i + k; j++) {
-                //가장 큰 수를 골라서 그 다음 인덱스를 시작 인덱스로 설정하기
-                if (arr[j] > max) {
-                    max = arr[j];
-                    start = j + 1;
+                if (max < current) {
+                    max = current;
+                    next = j;
                 }
             }
-            //가장 큰 문자를 넣어주기
-            sb.append(Character.toString(max));
+            sb.append(max);
+            idx = next++;
         }
 
-        //k게의 수를 제거할 때 얻을 수 있는 가장 큰 숫자를 구하려 한다.
-        answer = sb.toString();
-        return answer;
+        return sb.toString();
     }
 }
 
@@ -83,6 +77,36 @@ class Solution {
     }
 }
 
+* */
+
+/* 다른 풀이 3
+String answer = "";
+       StringBuilder sb = new StringBuilder();
+
+       char[] arr = number.toCharArray();
+
+       int len = arr.length - k;
+
+       //a문자 비교를 시작하는 인덱스를 나타내는 start 변수
+        int start = 0;
+
+        for (int i = 0; i < len; i++) {
+            char max = '0';
+            for (int j = start; j <= i + k; j++) {
+                //가장 큰 수를 골라서 그 다음 인덱스를 시작 인덱스로 설정하기
+                if (arr[j] > max) {
+                    max = arr[j];
+                    start = j + 1;
+                }
+            }
+            //가장 큰 문자를 넣어주기
+            sb.append(Character.toString(max));
+        }
+
+        //k게의 수를 제거할 때 얻을 수 있는 가장 큰 숫자를 구하려 한다.
+        answer = sb.toString();
+        return answer;
+*
 * */
 
 /*
