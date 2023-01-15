@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class Q2870 {
     public static void main(String[] args) throws Exception {
 
+        //Enter 만 경계로 인식하고 받은 데이터가 String으로 고정
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
@@ -34,6 +35,10 @@ public class Q2870 {
     }
 }
 
+//Read한 데이터는 Line 단위로만 나눠지기에 공백단위로 데이터를 가공하려면
+//1. StringTodenizer에 nextToken() 함수를 쓰면
+// readLine()을 통해 입력받은 값을 공백 단위로 구분하여 순서대로 호출할 수 있다.
+//2. String.split()함수를 활용해 배열에 공박단위로 끊어서 데이터를 넣고 사용하는 방식
 
 /*
 수학숙제 다국어
