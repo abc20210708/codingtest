@@ -1,10 +1,33 @@
 package com.example.programmers.lv2.v00;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Q07 {
     class Solution {
-        public boolean solution(String[] phoneBook) {
+        public boolean solution(String[] phone_book) {
+            boolean answer = true;
+
+            Arrays.sort(phone_book);
+
+            for(int i = 0; i < phone_book.length -1; i++) {
+                String s1 = phone_book[i];
+                String s2 = phone_book[i + 1];
+
+                if(s1.length() > s2.length()) continue;
+                else {
+                    s2 = s2.substring(0, s1.length());
+                    if(s1.equals(s2)) return false;
+                }
+            }
+
+            return answer;
+        }
+    }
+}
+
+
+/* 다른 풀이
             boolean answer = true;
 
             Map<String, Integer> map = new HashMap<>();
@@ -26,11 +49,9 @@ public class Q07 {
             }
 
             return answer;
-        }
-    }
-}
+* */
 
-/* 다른 풀이
+/* 다른 풀이 2
 import java.util.Arrays;
 
 class Solution {
