@@ -9,6 +9,12 @@ public class Q2870 {
 
         //Enter 만 경계로 인식하고 받은 데이터가 String으로 고정
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //InputStreamReader눈 Reader의 하위 클래스로
+        //BufferedReader 객체 생성시 파라미터로 이용가능
+        //그리고 입력자치로부터 바이트 정보를 식별하기 위해
+        //InputStream 중 하나인 System.in을 사용하면 된다.
+        
+
 
         int N = Integer.parseInt(br.readLine());
 
