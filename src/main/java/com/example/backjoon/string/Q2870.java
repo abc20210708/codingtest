@@ -13,7 +13,7 @@ public class Q2870 {
         //BufferedReader 객체 생성시 파라미터로 이용가능
         //그리고 입력자치로부터 바이트 정보를 식별하기 위해
         //InputStream 중 하나인 System.in을 사용하면 된다.
-        
+
 
 
         int N = Integer.parseInt(br.readLine());
@@ -28,8 +28,10 @@ public class Q2870 {
                 if(!s[j].equals(""))
                     list.add(new BigInteger(s[j]));
             }
-            list.sort(null);//비내림차순으로 정렬
+
         }
+
+        list.sort(null);//비내림차순으로 정렬
 
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
