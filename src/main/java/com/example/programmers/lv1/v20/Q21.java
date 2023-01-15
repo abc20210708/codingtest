@@ -2,10 +2,19 @@ package com.example.programmers.lv1.v20;
 
 public class Q21 {
     boolean solution(String s) {
-       return s.replaceAll("[^yY]", "").length()
-               - s.replaceAll("[^pP]", "").length() == 0;
+        s = s.toUpperCase(); //우선 대문자로 변환
+
+        int cnt  = 0;
+        for(char c : s.toCharArray()) {
+            if(c == 'Y') cnt++;
+            else if (c == 'P') cnt--;
+        }
+
+        return cnt == 0; //cnt == 0 이라면 true 를 return
     }
 }
+
+
 
 /* 다른 풀이
     boolean solution(String s) {
@@ -40,6 +49,12 @@ public class Q21 {
         if(cnt != 0) answer = false;
 
         return answer;
+* */
+
+/* 다른 풀이 3
+ return s.replaceAll("[^yY]", "").length()
+               - s.replaceAll("[^pP]", "").length() == 0;
+
 * */
 
 /*
