@@ -1,55 +1,56 @@
 package com.example.backjoon.string;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 //참고 블로그 https://broship.tistory.com/134?category=845145
 public class Q1213 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br =
+                new BufferedReader(new InputStreamReader(System.in));
 
-        String target = sc.nextLine();
-        int size = target.length();
+        String target = br.readLine();
+        br.close();
+
+        int len = target.length();
 
         int[] alp = new int[26];
 
-        //문자열을 입력 받으며 알파벳 세기
-        //아스키 코드 사용해 해당 알파벳 위치 더하기
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < len; i++) {
             alp[(int)target.charAt(i) - 65]++;
+        }
 
-        //알파벳 갯수 중 홀수가 있다면 가운데 위치하는 것만 가능
         int center = 0;
-        //홀수의 갯수 세기
-        int odd = 0;
+        int odd =0;
         for (int i = 0; i < 26; i++) {
-            if (alp[i] % 2 != 0) {
+            if (alp[i] % 2 != 0){
                 center = i;
                 odd++;
             }
         }
 
-        //홀수가 1개보다 많다면 만들 수 있다.
-        if(odd > 1 || (odd == 1 && size % 2 == 0)) {
+        if(odd > 1 || odd == 1 && len % 2 == 0) {
             System.out.println("I'm Sorry Hansoo");
             return;
         }
 
-        //홀수가 1개라면 가운데 위치시키고 양쪽을 완성시킨다.
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < alp.length; i++) {
-            for (int j = 0; j < alp[i]/2; j++) {
+            for (int j = 0; j < alp[i] / 2; j++) {
                 sb.append((char)(i + 65));
             }
         }
 
-        //알파벳을 순서대로 출력
         StringBuilder temp = new StringBuilder(sb.toString());
-        if(odd == 1) //가운데 알파벳 출력
+        if (odd == 1)
             sb.append((char)(center + 65));
 
         System.out.println(sb.toString() + temp.reverse());
+
 
     }
 
