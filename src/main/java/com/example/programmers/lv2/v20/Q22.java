@@ -12,7 +12,7 @@ public class Q22 {
             b = b.replace("ma", "4");
 
 
-
+            //정규식 표현 참고 블로그 https://codingwone.tistory.com/9
             if(b.matches(".*[a-zA-z].*")) {
                 System.out.println(b);
             } else if(b.contains("11")||b.contains("22")
