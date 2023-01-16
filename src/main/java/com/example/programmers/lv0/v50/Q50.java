@@ -1,31 +1,27 @@
 package com.example.programmers.lv0.v50;
 import java.util.*;
+import java.util.Arrays;
 
 public class Q50 {
     class Solution {
-        public int solution(String my_string) {
-            boolean isMinus = false;
-            Double answer = 0.0;
-            String[] exp = my_string.trim().split(" ");
-            for (String e : exp) {
-                if ("+".equals(e)) {
-                    isMinus = false;
-                } else if ("-".equals(e)) {
-                    isMinus = true;
-                } else {
-                    e = e.trim();
-                    if (isMinus) {
-                        answer -= Double.parseDouble(e);
-                    } else {
-                        answer += Double.parseDouble(e);
+                public int solution(String my_string) {
+                    int answer = 0;
+
+                    String[] ans = my_string.trim().split(" ");
+                    answer = Integer.parseInt(ans[0]);
+                    for(int i = 1; i < ans.length-1; i++){
+                        if(ans[i].equals("+")){
+                            answer +=  Integer.parseInt(ans[i+1]);
+                        }else if(ans[i].equals("-")){
+                            answer -= Integer.parseInt(ans[i+1]);
+                        }
                     }
+                    return answer;
                 }
             }
-
-            return answer.intValue();
         }
-    }
-}
+
+
 
 /* 다른 풀이
 import java.util.*;
@@ -54,6 +50,29 @@ class Solution {
     }
 }
 * */
+
+/* 다른 풀이 1
+boolean isMinus = false;
+            Double answer = 0.0;
+            String[] exp = my_string.trim().split(" ");
+            for (String e : exp) {
+                if ("+".equals(e)) {
+                    isMinus = false;
+                } else if ("-".equals(e)) {
+                    isMinus = true;
+                } else {
+                    e = e.trim();
+                    if (isMinus) {
+                        answer -= Double.parseDouble(e);
+                    } else {
+                        answer += Double.parseDouble(e);
+                    }
+                }
+            }
+
+            return answer.intValue();
+
+ * */
 
 /*
 문자열 계산하기
