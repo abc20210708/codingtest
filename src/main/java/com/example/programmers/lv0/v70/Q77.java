@@ -14,3 +14,4 @@ public class Q77 {
         return answer;
     }
 }
+//문자를 '1'을 숫자로 바꾸고 싶을 때 -'0' 아스키코드 로는 48
