@@ -22,7 +22,7 @@ public class Q2870 {
         ArrayList<BigInteger> list = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            //숫자만 기고 다 자름 ( 그러나 문자는 공백으로 되어있기에 제거)
+            //숫자만 남기고 다 자름 ( 그러나 문자는 공백으로 되어있기에 제거)
             String[] s= br.readLine().split("\\D");
             for (int j = 0; j < s.length; j++) {
                 if(!s[j].equals(""))
