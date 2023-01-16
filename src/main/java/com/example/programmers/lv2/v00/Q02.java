@@ -4,7 +4,34 @@ public class Q02 {
 
 // 참고 블로그  https://blackvill.tistory.com/178
 
-    public String solution(String s) {
+            public String solution(String s) {
+                String answer = "";
+
+                s = s.toLowerCase();
+                String[] arr = s.split("");
+
+                arr[0] = arr[0].toUpperCase();
+
+                for (int i=1; i<arr.length; i++) {
+                    if (arr[i-1].equals(" ") && !arr[i].equals(" ")) {
+                        arr[i] = arr[i].toUpperCase();
+                    }
+                }
+
+                StringBuilder sb = new StringBuilder();
+                for (int i=0; i<arr.length; i++) {
+                    sb.append(arr[i]);
+                }
+
+                return sb.toString();
+            }
+        }
+
+
+
+
+
+/* 다른 풀이
         String answer = "";
 
         //각 단어의 첫글자만 제외하고는 소문자이므로
@@ -24,8 +51,8 @@ public class Q02 {
         }
 
         return answer;
-    }
-}
+* */
+
 /*
 
 JadenCase 문자열 만들기
