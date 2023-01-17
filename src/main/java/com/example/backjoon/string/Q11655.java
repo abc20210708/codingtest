@@ -1,4 +1,4 @@
-package com.example.programmers.lv0.v60;
+package com.example.backjoon.string;
 
 
 import java.io.BufferedReader;
@@ -43,7 +43,7 @@ One is 1
 예제 출력 2
 Bar vf 1
 * */
-public class Q80 {
+public class Q11655 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br =
