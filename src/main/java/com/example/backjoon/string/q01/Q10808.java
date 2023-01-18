@@ -1,4 +1,4 @@
-package com.example.backjoon.string;
+package com.example.backjoon.string.q01;
 
 import java.util.Scanner;
 
