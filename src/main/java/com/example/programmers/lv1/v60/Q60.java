@@ -9,8 +9,8 @@ public class Q60 {
         //빈 병의 수가 a개보다 미만일 경우
         while(n >= a) {
 
-            answer += (n / a) * b;
-            int num = n % a;
+            answer += (n / a) * b; //마트에서 받은 콜라의 수
+            int num = n % a; //남은 병을 더해서 다음에 마트갈 때 이용
 
             n  = (n / a) * b + num;
 
