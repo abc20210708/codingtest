@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 //행렬 곱셈
 //참고 블로그 https://subin-programming.tistory.com/86
+//          https://gaegosoo.tistory.com/23
 public class Q2740 {
     public static void main(String[] args) {
 
