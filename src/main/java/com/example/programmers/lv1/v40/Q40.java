@@ -4,6 +4,25 @@ public class Q40 {
     public int[] solution(int n, int m) {
         int[] answer = {0, 0};
 
+        int num = (n > m) ? gcd(n, m) : gcd(m, n);
+
+        answer[0] = num;
+        answer[1] = (n * m) / num;
+
+        return answer;
+
+     }
+
+    public int gcd(int num1, int num2) {
+        if(num2 == 0) return num1;
+        else return gcd(num2, num2 % num1);
+    }
+}
+
+/* 다른 풀이
+public int[] solution(int n, int m) {
+        int[] answer = {0, 0};
+
         for(int i = 1; i < n + m; i++) {
             if(n % i == 0 && m % i == 0) {
                 answer[0] = i;
@@ -13,7 +32,8 @@ public class Q40 {
 
         return answer;
     }
-}
+
+* */
 
 /*
 최대공약수와 최소공배수
