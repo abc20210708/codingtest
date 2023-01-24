@@ -5,10 +5,34 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //차량 번호판 1 https://www.acmicpc.net/problem/16968
+//참고 블로그 https://colin-sh.tistory.com/60
 public class Q16968 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br
+                = new BufferedReader(new InputStreamReader(System.in));
+
+        //차량 번호판의 형식
+        String target = br.readLine();
+        br.close();
+
+        int num = 1;
+
+        for (int i = 0; i < target.length(); i++) {
+            //c = 알파벳, d = 숫자
+            int n = target.charAt(i) == 'c' ? 26 : 10;
+            if(i > 0 && target.charAt(i) == target.charAt(i -1))
+                n--;
+
+            num *= n;
+        }
+        System.out.println(num);
+
+    }
+}
+
+/* 다른 풀이
+ BufferedReader br
                     = new BufferedReader(new InputStreamReader(System.in));
 
         //차량 번호판의 형식
@@ -36,6 +60,5 @@ public class Q16968 {
         }
 
         System.out.println(num);
-        
-    }
-}
+
+* */
