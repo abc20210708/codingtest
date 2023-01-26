@@ -20,6 +20,22 @@ public class Q16917 {
         int X = Integer.parseInt(st.nextToken());
         int Y = Integer.parseInt(st.nextToken());
 
+        long total = A * X + B * Y;
+        int cnt = Math.min(X, Y);
+
+        while(cnt-- > 0) {
+            if((A + B) > C)
+                total = (total - A - B) + C;
+        }
+
+        total = Math.min(total, Math.max(X, Y) * C);
+        System.out.println(total);
+
+    }
+}
+
+
+/* 다른 풀이
 
         int num = 0;
         if(A + B < C)
@@ -45,5 +61,5 @@ public class Q16917 {
         }
 
         System.out.println(num);
-    }
-}
+
+* */
