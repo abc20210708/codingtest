@@ -35,3 +35,29 @@ public class Q2460 {
 
     }
 }
+
+
+//참고 블로그 https://velog.io/@ejung803/%EB%B0%B1%EC%A4%80-2460%EB%B2%88-%EC%A7%80%EB%8A%A5%ED%98%95-%EA%B8%B0%EC%B0%A8-2
+/* 다른 풀이
+ public static void main(String[] args) {
+        int in, out = 0;    // in = 탄사람, out = 내린사람
+        int sum = 0;    // 기차에 남아있는 사람을 저장할 변수
+        int max = 0;    // 기차에 사람이 가장 많을 때의 값을 저장할 변수
+
+        Scanner sc = new Scanner(System.in);
+
+        for(int i=0; i<10; i++) {
+            out = sc.nextInt();
+            in = sc.nextInt();
+
+            sum = sum - out + in;
+
+            if(max < sum) {
+                max = sum;
+            }
+        }
+
+        System.out.println(max);
+    }
+
+* */
