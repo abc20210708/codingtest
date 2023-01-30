@@ -52,6 +52,17 @@ class Solution {
 }
 * */
 
+/* 파이썬으로 풀이
+def solution(n):
+    answer = 0
+
+    while n > 0 :
+        answer += int(n) % 10
+        n /= 10
+
+    return answer
+* */
+
 /*
 자릿수 더하기
 
