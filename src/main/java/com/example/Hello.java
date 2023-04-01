@@ -11,6 +11,7 @@ public class Hello {
         System.out.println(nums.length);
         System.out.println("2차원 배열 총 길이: " + myNumbers.length);
         System.out.println("myNumbers[2]의 길이: " + myNumbers[2].length);
+        System.out.println(myNumbers.length +" " + myNumbers[2].length);
 
     }
 }
