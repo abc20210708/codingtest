@@ -78,7 +78,9 @@ public class ArrayStack {
         System.out.println(stack.isEmpty());//false
 
         //스택에 더 이상 데이터를 추가할 수 없는지 확인
-        System.out.println(stack.isFull());//true
+        System.out.println(stack.isFull());//false
+        System.out.println(stack.top);
+        System.out.println(stack.size);
 
     }
 
