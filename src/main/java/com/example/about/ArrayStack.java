@@ -40,7 +40,7 @@ public class ArrayStack {
         if (isEmpty())
             throw new ArrayIndexOutOfBoundsException();
         //스택의 가장 위에 있는 데이터를 꺼내고,
-        //해당 위치의 값을 null로 초기ㅗ하
+        //해당 위치의 값을 null로 초기화
         Object poppedData = stack[top];
         stack[top--] = null;
         //꺼낸 데이터를 반환
@@ -53,6 +53,33 @@ public class ArrayStack {
             return null;
         else
             return this.stack[top];
+    }
+
+    public static void main(String[] args) {
+        //스택 객체 생성
+        ArrayStack stack = new ArrayStack(5);
+
+        //스택에 데이터 추가
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        //스택에서 데이터 꺼내기
+        System.out.println(stack.pop());//5
+        System.out.println(stack.pop());//4
+        System.out.println(stack.pop());//3
+
+        //스택의 가장 위에 있는 데이터 확인하기
+        System.out.println(stack.peek());//2
+
+        //스택이 비어있는지 확인
+        System.out.println(stack.isEmpty());//false
+
+        //스택에 더 이상 데이터를 추가할 수 없는지 확인
+        System.out.println(stack.isFull());//true
+
     }
 
 }//
