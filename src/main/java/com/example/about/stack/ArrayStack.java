@@ -27,7 +27,7 @@ public class ArrayStack {
 
     //스택에 데이터를 추가하는 메서드
     public void push(Object data) {
-        //스택이 꽉 차있다면 예외를 발생생
+        //스택이 꽉 차있다면 예외를 발생
        if (isFull())
             throw new ArrayIndexOutOfBoundsException();
        //스택의 가장 위에 있는 데이터의 위치를 1 증가하고 데이터를 추가
