@@ -5,6 +5,7 @@ public class ListStack<T> {
 
     // 스택의 맨 위를 가리키는 노드
     Node<T> head = null;
+    // 스택의 맨 아래를 가리키는 노드
     Node<T> bottom = null;
 
     // 스택이 비어있는지 확인하는 메소드
