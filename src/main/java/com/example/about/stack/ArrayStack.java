@@ -1,4 +1,4 @@
-package com.example.about;
+package com.example.about.stack;
 // 참고 블로그 https://you88.tistory.com/29
 // 참고 깃허브 https://github.com/you88311/data-structure/blob/main/stack/src/ArrayStack.java
 public class ArrayStack {

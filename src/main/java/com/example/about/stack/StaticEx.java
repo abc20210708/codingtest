@@ -1,4 +1,4 @@
-package com.example.about;
+package com.example.about.stack;
 
 // 참고 블로그 https://kingofbackend.tistory.com/131
 public class StaticEx {
