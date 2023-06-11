@@ -101,4 +101,21 @@ public class Version<str> {
                 .forEach(a -> System.out.println(a));
     }
 
+    // 참고 블로그 https://velog.io/@min9288/%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B8%B0%EC%88%A0-%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B8%EC%9E%90%EB%B0%94
+    // 4. Interface의 default라는 메서드를 구현 가능
+    /*
+    기존에는 공통적인 함수라도 인터페이스의 구현체들은 똑같은 것을 각각 다 따로 구현을
+    해야 했는데, default가 생김으로써 인터페이스 안에 공통적으로 사용하는 함수를
+    미리 정의할 수 있게 되었습니다.
+    * */
+
+    // 자바 11 특징
+    /*
+    1. String, File 클래스에 몇 가지 메소드 추가
+    2. 람다표현식에 var 키워드를 사용 간으하도록 기능 추가
+    3. Http Client 추가
+    기존에는 아파치 라이브러리를 사용했는데, 11부터는 자바 표준
+    Http Client API가 생겼고, 성능이 이전 것보다 개선 되었습니다.
+    * */
+
 }//
