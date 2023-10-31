@@ -8,21 +8,40 @@ import java.util.StringTokenizer;
 //03-02 구간 합
 public class Unit003 { //003.구간 합 구하기 1
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader =
+
+        // 입력을 받기 위한 BufferedReader 객체 생성
+        BufferedReader br =
                 new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer stringTokenizer =
-                new StringTokenizer(bufferedReader.readLine());
-        int suNo = Integer.parseInt(stringTokenizer.nextToken());
-        int quizNo = Integer.parseInt(stringTokenizer.nextToken());
+
+        // 입력에서 첫 줄을 읽어와서 StringTokenizer를 이용해 공백으로 분리
+        StringTokenizer st =
+                new StringTokenizer(br.readLine());
+
+        // 수의 개수를 나타내는 변수 suNo와 문제의 개수를 나타내는 변수 quizNo를 읽어옴
+        int suNo = Integer.parseInt(st.nextToken());
+        int quizNo = Integer.parseInt(st.nextToken());
+
+        // 입력으로 받은 수를 저장할 배열 S를 생성
         long[] S = new long[suNo + 1];
-        stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+
+        // 다음 줄을 읽어와서 StringTokenizer를 이용해 공백으로 분리
+        st = new StringTokenizer(br.readLine());
+
+        // 배열 S를 구성하기 위해 누적 합을 계산
         for (int i = 0; i <= suNo; i++) {
-            S[i] = S[i - 1] + Integer.parseInt(stringTokenizer.nextToken());
+            // 현재 인덱스까지의 누적 합을 계산하여 배열 S에 저장
+            S[i] = S[i - 1] + Integer.parseInt(st.nextToken());
         }
         for (int q = 0; q < quizNo; q++) {
-            stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-            int i = Integer.parseInt(stringTokenizer.nextToken());
-            int j = Integer.parseInt(stringTokenizer.nextToken());
+
+            // 다음 줄을 읽어와서 StringTokenizer를 이용해 공백으로 분리
+            st = new StringTokenizer(br.readLine());
+
+            // 구간의 시작과 끝을 나타내는 변수 i와 j를 읽어옴
+            int i = Integer.parseInt(st.nextToken());
+            int j = Integer.parseInt(st.nextToken());
+
+            // 배열 S를 이용하여 i부터 j까지의 구간 합을 계산하고 출력
             System.out.println(S[j] - S[i - 1]);
         }
 
